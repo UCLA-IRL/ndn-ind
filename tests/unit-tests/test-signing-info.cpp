@@ -38,7 +38,7 @@
 #include <ndn-ind/security/signing-info.hpp>
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 class TestSigningInfo : public ::testing::Test {
 };

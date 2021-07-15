@@ -37,7 +37,7 @@
 
 #include "../../interest.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A CertificateRequest represents a request for a certificate, associated with

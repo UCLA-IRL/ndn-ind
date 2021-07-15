@@ -38,7 +38,7 @@
 #include <map>
 #include "pib-impl.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * PibMemory extends PibImpl and is used by the Pib class as an in-memory

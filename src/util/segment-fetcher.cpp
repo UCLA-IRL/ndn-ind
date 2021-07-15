@@ -38,11 +38,11 @@
 #include <ndn-ind/util/segment-fetcher.hpp>
 
 using namespace std;
-using namespace ndn::func_lib;
+using namespace ndn_ind::func_lib;
 
 INIT_LOGGER("ndn.SegmentFetcher");
 
-namespace ndn {
+namespace ndn_ind {
 
 bool
 SegmentFetcher::DontVerifySegment(const ptr_lib::shared_ptr<Data>& data)

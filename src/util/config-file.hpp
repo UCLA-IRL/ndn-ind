@@ -27,7 +27,7 @@
 #include <map>
 #include <exception>
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A ConfigFile locates, opens, and parses a library configuration file, and

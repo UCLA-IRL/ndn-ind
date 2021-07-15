@@ -43,7 +43,7 @@
 #include <sqlite3.h>
 #include <ndn-ind/util/blob.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 /*
  * Sqlite3Statement is a utility class to wrap an SQLite3 prepared statement,

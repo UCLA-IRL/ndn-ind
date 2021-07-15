@@ -34,7 +34,7 @@
 #include "../../c/util/dynamic-uint8-array.h"
 #include <ndn-ind/lite/util/dynamic-uint8-array-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 DynamicUInt8ArrayLite::DynamicUInt8ArrayLite
   (uint8_t *array, size_t length, ndn_ReallocFunction reallocFunction)

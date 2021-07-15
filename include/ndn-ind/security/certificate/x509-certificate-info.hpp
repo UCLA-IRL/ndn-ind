@@ -25,7 +25,7 @@
 #include "../../util/signed-blob.hpp"
 #include "../validity-period.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class DerNode;
 

@@ -27,7 +27,7 @@
 #include "v2/certificate-fetcher-from-network.hpp"
 #include "v2/validator.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * ValidatorConfig extends Validator to implements a validator which can be

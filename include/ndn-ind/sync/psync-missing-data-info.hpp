@@ -36,7 +36,7 @@
 
 #include "../name.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class ndn_ind_dll PSyncMissingDataInfo
 {

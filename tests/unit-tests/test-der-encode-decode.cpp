@@ -40,7 +40,7 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
+using namespace ndn_ind;
 
 typedef DerNode::DerSequence DerSequence;
 typedef DerNode::DerOctetString DerOctetString;
@@ -217,7 +217,7 @@ TEST_F(TestCertificate, Extension)
     parsedExtValue->getChildren();
   ASSERT_EQ(3, decodedExtValueRoot.size()) <<
     "Wrong number of certificate extension value items after decoding";
-  
+
   DerOctetString& decodedName = dynamic_cast<DerOctetString&>(*decodedExtValueRoot[0]);
   DerInteger& decodedTrustClass = dynamic_cast<DerInteger&>(*decodedExtValueRoot[1]);
   DerInteger& decodedTrustLevel = dynamic_cast<DerInteger&>(*decodedExtValueRoot[2]);

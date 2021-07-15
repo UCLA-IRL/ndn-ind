@@ -47,9 +47,9 @@ INIT_LOGGER("ndn.Node");
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn::func_lib;
+using namespace ndn_ind::func_lib;
 
-namespace ndn {
+namespace ndn_ind {
 
 Node::Node(const ptr_lib::shared_ptr<Transport>& transport, const ptr_lib::shared_ptr<const Transport::ConnectionInfo>& connectionInfo)
 : transport_(transport), connectionInfo_(connectionInfo),
@@ -138,7 +138,7 @@ Node::registerPrefix
    const ptr_lib::shared_ptr<const Name>& prefixCopy,
    const OnInterestCallback& onInterest,
    const OnRegisterFailed& onRegisterFailed,
-   const OnRegisterSuccess& onRegisterSuccess, 
+   const OnRegisterSuccess& onRegisterSuccess,
    const RegistrationOptions& registrationOptions,
    WireFormat& wireFormat, KeyChain& commandKeyChain,
    const Name& commandCertificateName, Face* face)
@@ -356,7 +356,7 @@ void
 Node::nfdRegisterPrefix
   (uint64_t registeredPrefixId, const ptr_lib::shared_ptr<const Name>& prefix,
    const OnInterestCallback& onInterest, const OnRegisterFailed& onRegisterFailed,
-   const OnRegisterSuccess& onRegisterSuccess, 
+   const OnRegisterSuccess& onRegisterSuccess,
    const RegistrationOptions& registrationOptions,
    KeyChain& commandKeyChain, const Name& commandCertificateName,
    WireFormat& wireFormat, Face* face)

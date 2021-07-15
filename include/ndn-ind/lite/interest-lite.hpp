@@ -38,7 +38,7 @@
 #include "key-locator-lite.hpp"
 #include "../c/interest-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An InterestLite holds a NameLite and other fields for an interest.

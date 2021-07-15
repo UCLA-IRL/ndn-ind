@@ -41,7 +41,7 @@
 // Give friend access to the tests.
 class TestKeyChain_Management_Test;
 
-namespace ndn {
+namespace ndn_ind {
 
 class PibKeyImpl;
 

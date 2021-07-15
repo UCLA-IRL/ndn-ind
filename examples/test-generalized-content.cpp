@@ -45,8 +45,8 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 using namespace ndntools;
 
 static void
@@ -85,11 +85,11 @@ int main(int argc, char** argv)
     // On register success, this will call publishAndFetch to continue.
     Name prefix("/ndn/testuser/flume/channel/1/content/10");
     contentCache.registerPrefix
-      (prefix, bind(&onRegisterFailed, _1, &enabled), 
+      (prefix, bind(&onRegisterFailed, _1, &enabled),
        (OnRegisterSuccess)bind
         (&publishAndFetch, _1, _2, &prefix, &contentCache, &keyChain,
          &certificateName, &consumerFace, &enabled));
-    
+
     while (enabled) {
       producerFace.processEvents();
       consumerFace.processEvents();

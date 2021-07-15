@@ -38,7 +38,7 @@
 #include "util/blob-lite.hpp"
 #include "../c/name-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 class ExcludeLite;
 

@@ -44,7 +44,7 @@
 #include <CoreServices/CoreServices.h>
 #include "../../c/common.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * CFReleaser is a helper class to wrap CoreFoundation object pointers.

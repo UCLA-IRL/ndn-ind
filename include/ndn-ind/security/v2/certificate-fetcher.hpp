@@ -39,7 +39,7 @@
 #include "certificate-request.hpp"
 #include "validation-state.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * CertificateFetcher is an abstract base class which provides an interface used

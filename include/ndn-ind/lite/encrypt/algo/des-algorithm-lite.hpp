@@ -37,7 +37,7 @@
 #include "../../util/blob-lite.hpp"
 #include "../../../c/errors.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * The DesAlgorithmLite class provides static methods to encrypt and decrypt

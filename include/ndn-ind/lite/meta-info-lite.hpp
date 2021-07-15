@@ -37,7 +37,7 @@
 #include "name-lite.hpp"
 #include "../c/data-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A MetaInfoLite holds a type and other info to represent the meta info of a

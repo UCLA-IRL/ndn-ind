@@ -37,7 +37,7 @@
 #include <ndn-ind/face.hpp>
 #include "interest-filter-table.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A RegisteredPrefixTable is an internal class to hold a list of registered

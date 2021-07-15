@@ -40,7 +40,7 @@
 #include <ndn-ind/lp-packet-header-field.hpp>
 #include <ndn-ind/util/blob.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An LpPacket represents an NDNLPv2 packet including header fields an an

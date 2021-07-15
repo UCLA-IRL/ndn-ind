@@ -38,7 +38,7 @@
 #include "security-common.hpp"
 #include "v2/certificate-v2.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class TlvEncoder;
 

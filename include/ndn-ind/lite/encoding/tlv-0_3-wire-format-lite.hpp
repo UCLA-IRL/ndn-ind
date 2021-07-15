@@ -44,7 +44,7 @@
 #include "../encrypt/encrypted-content-lite.hpp"
 #include "../util/dynamic-uint8-array-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A Tlv0_3WireFormatLite implements implement encoding and decoding using

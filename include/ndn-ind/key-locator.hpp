@@ -40,7 +40,7 @@
 #include "util/change-counter.hpp"
 #include "lite/key-locator-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class Signature;
 

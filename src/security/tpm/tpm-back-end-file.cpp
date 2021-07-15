@@ -50,7 +50,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 TpmBackEndFile::TpmBackEndFile(const string& locationPath)
 {

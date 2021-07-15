@@ -38,7 +38,7 @@ INIT_LOGGER("ndn.InterestFilterTable");
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 void
 InterestFilterTable::getMatchedFilters

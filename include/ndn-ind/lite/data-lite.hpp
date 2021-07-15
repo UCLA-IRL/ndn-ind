@@ -38,7 +38,7 @@
 #include "signature-lite.hpp"
 #include "../c/data-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A DataLite holds a NameLite and other fields to represent an NDN Data packet.

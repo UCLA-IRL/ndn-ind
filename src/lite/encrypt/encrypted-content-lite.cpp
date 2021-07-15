@@ -34,7 +34,7 @@
 #include "../../c/encrypt/encrypted-content.h"
 #include <ndn-ind/lite/encrypt/encrypted-content-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 EncryptedContentLite::EncryptedContentLite
   (ndn_NameComponent* keyNameComponents, size_t maxKeyNameComponents)

@@ -39,7 +39,7 @@
 #include "../../../data.hpp"
 #include "config-name-relation.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class BoostInfoTree;
 class NdnRegexTopMatcher;

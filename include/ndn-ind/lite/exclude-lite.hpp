@@ -37,7 +37,7 @@
 #include "name-lite.hpp"
 #include "../c/interest-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An ExcludeLite holds an array of ExcludeLite::Entry.

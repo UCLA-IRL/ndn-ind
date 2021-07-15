@@ -40,7 +40,7 @@
 #include "../security/key-chain.hpp"
 #include "psync-producer-base.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 const std::chrono::nanoseconds DEFAULT_SYNC_INTEREST_LIFETIME =
   std::chrono::seconds(1);
@@ -153,7 +153,7 @@ private:
     Impl
       (size_t expectedNEntries, Face& face, const Name& syncPrefix,
        const OnNamesUpdate& onNamesUpdate, KeyChain& keyChain,
-       std::chrono::nanoseconds syncInterestLifetime, 
+       std::chrono::nanoseconds syncInterestLifetime,
        std::chrono::nanoseconds syncReplyFreshnessPeriod,
        const SigningInfo& signingInfo, const CanAddToSyncData& canAddToSyncData,
        const CanAddReceivedName& canAddReceivedName);
@@ -214,7 +214,7 @@ private:
     onError(SegmentFetcher::ErrorCode errorCode, const std::string& message);
 
     /**
-     * Send the sync Data. Check if the data will satisfy our own pending 
+     * Send the sync Data. Check if the data will satisfy our own pending
      * Interest. If it does, then remove it and then renew the sync interest.
      * Otherwise, just send the Data.
      * @param name The basis to use for the Data name.
@@ -229,7 +229,7 @@ private:
      * Interest with the Interest name, which would have been satisfied by the
      * forwarder once it got the data. For each name in the data content, check
      * that we don't already have the name, and call _canAddReceivedName (which
-     * may process the name as a prefix/sequenceNo). Call onUpdate_ to notify 
+     * may process the name as a prefix/sequenceNo). Call onUpdate_ to notify
      * the application about the updates. Call sendSyncInterest because the last
      * one was satisfied by the incoming data.
      * @param encodedContent The encoded sync data content that was assembled by

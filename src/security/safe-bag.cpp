@@ -45,7 +45,7 @@
 using namespace std;
 using namespace std::chrono;
 
-namespace ndn {
+namespace ndn_ind {
 
 void
 SafeBag::wireDecode(const uint8_t* input, size_t inputLength)
@@ -63,7 +63,7 @@ SafeBag::wireDecode(const uint8_t* input, size_t inputLength)
   certificate_->wireDecode
     (decoder.getSlice(certificateBeginOffset, certificateEndOffset),
      *TlvWireFormat::get());
-  
+
   privateKeyBag_ = Blob(decoder.readBlobTlv(ndn_Tlv_SafeBag_EncryptedKeyBag));
 
   decoder.finishNestedTlvs(endOffset);

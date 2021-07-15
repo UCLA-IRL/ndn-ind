@@ -42,7 +42,7 @@
 using namespace std;
 using namespace std::chrono;
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A ControlParameters holds a Name and other fields for a

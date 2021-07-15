@@ -38,7 +38,7 @@
 #include <ndn-ind/common.hpp>
 #include <string>
 
-namespace ndn {
+namespace ndn_ind {
 
 class DigestTree {
 public:

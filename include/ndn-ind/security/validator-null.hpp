@@ -37,7 +37,7 @@
 
 #include "v2/validator.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A ValidatorNull extends Validator with an "accept-all" policy and an offline

@@ -36,7 +36,7 @@
 
 #include "registration-options.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * @deprecated Use RegistrationOptions.

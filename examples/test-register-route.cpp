@@ -57,8 +57,8 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 static void
 processFaceStatus

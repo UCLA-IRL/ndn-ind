@@ -47,11 +47,11 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn::func_lib;
+using namespace ndn_ind::func_lib;
 
 INIT_LOGGER("ndn.FullPSync2017WithUsers");
 
-namespace ndn {
+namespace ndn_ind {
 
 FullPSync2017WithUsers::Impl::Impl(const OnUpdate& onUpdate)
 : onUpdate_(onUpdate), prefixes_(new PSyncUserPrefixes())

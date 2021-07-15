@@ -34,7 +34,7 @@
 #include "../c/data.h"
 #include <ndn-ind/lite/data-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 DataLite::DataLite
   (ndn_NameComponent* nameComponents, size_t maxNameComponents,

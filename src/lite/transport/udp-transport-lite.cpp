@@ -38,7 +38,7 @@
 #include "../../c/transport/udp-transport.h"
 #include <ndn-ind/lite/transport/udp-transport-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 UdpTransportLite::UdpTransportLite(DynamicUInt8ArrayLite& buffer, bool readRawPackets)
 {

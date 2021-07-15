@@ -39,7 +39,7 @@ INIT_LOGGER("ndn.RegisteredPrefixTable");
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 bool
 RegisteredPrefixTable::add

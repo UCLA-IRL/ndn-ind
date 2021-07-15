@@ -39,7 +39,7 @@
 #include <map>
 #include "trust-anchor-group.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A TrustAnchorContainer represents a container for trust anchors.
@@ -87,7 +87,7 @@ public:
    * Insert dynamic trust anchors from the path.
    * @param groupId The certificate group id, which must not be empty.
    * @param path The path to load the trust anchors.
-   * @param refreshPeriod  The refresh time for the anchors under path. This 
+   * @param refreshPeriod  The refresh time for the anchors under path. This
    * must be positive. The relevant trust anchors will only be updated when find
    * is called.
    * @param isDirectory (optional) If true, then path is a directory. If false

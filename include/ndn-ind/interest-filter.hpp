@@ -36,7 +36,7 @@
 
 #include "name.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An InterestFilter holds a Name prefix and optional regex match expression for

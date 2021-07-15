@@ -39,7 +39,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 LpPacketHeaderField::~LpPacketHeaderField() {}
 

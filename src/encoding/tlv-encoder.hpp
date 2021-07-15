@@ -41,7 +41,7 @@
 #include "../util/dynamic-uint8-vector.hpp"
 #include "../c/encoding/tlv/tlv-encoder.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A TlvEncoder extends a C ndn_TlvEncoder struct and wraps related functions.

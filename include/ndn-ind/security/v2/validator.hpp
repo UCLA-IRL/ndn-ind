@@ -38,7 +38,7 @@
 #include "certificate-fetcher-offline.hpp"
 #include "validation-policy.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * The Validator class provides an interface for validating data and interest

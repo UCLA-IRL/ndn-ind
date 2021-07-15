@@ -38,7 +38,7 @@
 #include "../common.hpp"
 #include "../lite/security/validity-period-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
   class Signature;
 

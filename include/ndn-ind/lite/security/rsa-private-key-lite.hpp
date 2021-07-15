@@ -39,7 +39,7 @@
 #include "../../c/encrypt/algo/encrypt-params-types.h"
 #include "../../c/security/rsa-private-key-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An RsaPrivateKeyLite holds a decoded or generated RSA private key for use in

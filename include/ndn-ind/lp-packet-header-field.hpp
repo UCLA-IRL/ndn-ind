@@ -34,7 +34,7 @@
 #ifndef NDN_LP_PACKET_HEADER_FIELD_HPP
 #define NDN_LP_PACKET_HEADER_FIELD_HPP
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * This is a base class for LP packet header fields like NetworkNack. The

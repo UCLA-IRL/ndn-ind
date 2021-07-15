@@ -46,7 +46,7 @@ namespace ndntools {
  * info and segmented content. See the methods for more detail.
  * @note The support for GeneralizedContent is experimental and the API is not finalized.
  */
-class GeneralizedContent : public ndn::ptr_lib::enable_shared_from_this<GeneralizedContent> {
+class GeneralizedContent : public ndn_ind::ptr_lib::enable_shared_from_this<GeneralizedContent> {
 public:
   enum ErrorCode {
     // Repeat the error codes from SegmentFetcher.
@@ -57,11 +57,11 @@ public:
     META_INFO_DECODING_FAILED = 4
   };
 
-  typedef ndn::func_lib::function<void
-    (const ndn::ptr_lib::shared_ptr<ContentMetaInfo>& metaInfo,
-     const ndn::Blob& content)> OnComplete;
+  typedef ndn_ind::func_lib::function<void
+    (const ndn_ind::ptr_lib::shared_ptr<ContentMetaInfo>& metaInfo,
+     const ndn_ind::Blob& content)> OnComplete;
 
-  typedef ndn::func_lib::function<void
+  typedef ndn_ind::func_lib::function<void
     (ErrorCode errorCode, const std::string& message)> OnError;
 
   /**
@@ -87,10 +87,10 @@ public:
    */
   static void
   publish
-    (ndn::MemoryContentCache& contentCache, const ndn::Name& prefix,
-     std::chrono::nanoseconds freshnessPeriod, ndn::KeyChain* signingKeyChain,
-     const ndn::Name& signingCertificateName, const ContentMetaInfo& metaInfo,
-     const ndn::Blob& content, size_t contentSegmentSize);
+    (ndn_ind::MemoryContentCache& contentCache, const ndn_ind::Name& prefix,
+     std::chrono::nanoseconds freshnessPeriod, ndn_ind::KeyChain* signingKeyChain,
+     const ndn_ind::Name& signingCertificateName, const ContentMetaInfo& metaInfo,
+     const ndn_ind::Blob& content, size_t contentSegmentSize);
 
   /**
    * Initiate meta info and segmented content fetching. This first fetches and
@@ -120,14 +120,14 @@ public:
    * NOTE: The library will log any exceptions thrown by this callback, but for
    * better error handling the callback should catch and properly handle any
    * exceptions.
-   * @param interestLifetime (optional) The Interest lifetime for fetching the 
+   * @param interestLifetime (optional) The Interest lifetime for fetching the
    * _meta info and segments. If omitted, use the default value from the default
    * Interest object.
    */
   static void
   fetch
-    (ndn::Face& face, const ndn::Name& prefix,
-     const ndn::SegmentFetcher::VerifySegment& verifySegment,
+    (ndn_ind::Face& face, const ndn_ind::Name& prefix,
+     const ndn_ind::SegmentFetcher::VerifySegment& verifySegment,
      const OnComplete& onComplete, const OnError& onError,
      std::chrono::nanoseconds interestLifetime = std::chrono::seconds(4));
 
@@ -137,8 +137,8 @@ private:
    * for details. After creating the SegmentFetcher, call fetchMetaInfo.
    */
   GeneralizedContent
-    (ndn::Face& face, const ndn::Name& prefix, 
-     const ndn::SegmentFetcher::VerifySegment& verifySegment,
+    (ndn_ind::Face& face, const ndn_ind::Name& prefix,
+     const ndn_ind::SegmentFetcher::VerifySegment& verifySegment,
      const OnComplete& onComplete, const OnError& onError,
      std::chrono::nanoseconds interestLifetime)
   : face_(face), prefix_(prefix), verifySegment_(verifySegment),
@@ -152,26 +152,26 @@ private:
 
   void
   onMetaInfoReceived
-    (const ndn::ptr_lib::shared_ptr<const ndn::Interest>& originalInterest,
-     const ndn::ptr_lib::shared_ptr<ndn::Data>& data);
+    (const ndn_ind::ptr_lib::shared_ptr<const ndn_ind::Interest>& originalInterest,
+     const ndn_ind::ptr_lib::shared_ptr<ndn_ind::Data>& data);
 
   void
-  onMetaInfoTimeout(const ndn::ptr_lib::shared_ptr<const ndn::Interest>& interest);
+  onMetaInfoTimeout(const ndn_ind::ptr_lib::shared_ptr<const ndn_ind::Interest>& interest);
 
   void
-  onContentReceived(const ndn::Blob& content);
+  onContentReceived(const ndn_ind::Blob& content);
 
   void
   onSegmentFetcherError
-    (ndn::SegmentFetcher::ErrorCode errorCode, const std::string& message);
+    (ndn_ind::SegmentFetcher::ErrorCode errorCode, const std::string& message);
 
-  ndn::Face& face_;
-  ndn::Name prefix_;
-  ndn::SegmentFetcher::VerifySegment verifySegment_;
+  ndn_ind::Face& face_;
+  ndn_ind::Name prefix_;
+  ndn_ind::SegmentFetcher::VerifySegment verifySegment_;
   OnComplete onComplete_;
   OnError onError_;
   std::chrono::nanoseconds interestLifetime_;
-  ndn::ptr_lib::shared_ptr<ContentMetaInfo> metaInfo_;
+  ndn_ind::ptr_lib::shared_ptr<ContentMetaInfo> metaInfo_;
 };
 
 }

@@ -44,29 +44,29 @@ class PibDataFixture
 public:
   PibDataFixture();
 
-  ndn::PibImpl *pib;
+  ndn_ind::PibImpl *pib;
 
-  ndn::ptr_lib::shared_ptr<ndn::CertificateV2> id1Key1Cert1;
-  ndn::ptr_lib::shared_ptr<ndn::CertificateV2> id1Key1Cert2;
-  ndn::ptr_lib::shared_ptr<ndn::CertificateV2> id1Key2Cert1;
-  ndn::ptr_lib::shared_ptr<ndn::CertificateV2> id1Key2Cert2;
-  ndn::ptr_lib::shared_ptr<ndn::CertificateV2> id2Key1Cert1;
-  ndn::ptr_lib::shared_ptr<ndn::CertificateV2> id2Key1Cert2;
-  ndn::ptr_lib::shared_ptr<ndn::CertificateV2> id2Key2Cert1;
-  ndn::ptr_lib::shared_ptr<ndn::CertificateV2> id2Key2Cert2;
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::CertificateV2> id1Key1Cert1;
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::CertificateV2> id1Key1Cert2;
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::CertificateV2> id1Key2Cert1;
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::CertificateV2> id1Key2Cert2;
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::CertificateV2> id2Key1Cert1;
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::CertificateV2> id2Key1Cert2;
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::CertificateV2> id2Key2Cert1;
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::CertificateV2> id2Key2Cert2;
 
-  ndn::Name id1;
-  ndn::Name id2;
+  ndn_ind::Name id1;
+  ndn_ind::Name id2;
 
-  ndn::Name id1Key1Name;
-  ndn::Name id1Key2Name;
-  ndn::Name id2Key1Name;
-  ndn::Name id2Key2Name;
+  ndn_ind::Name id1Key1Name;
+  ndn_ind::Name id1Key2Name;
+  ndn_ind::Name id2Key1Name;
+  ndn_ind::Name id2Key2Name;
 
-  ndn::Blob id1Key1;
-  ndn::Blob id1Key2;
-  ndn::Blob id2Key1;
-  ndn::Blob id2Key2;
+  ndn_ind::Blob id1Key1;
+  ndn_ind::Blob id1Key2;
+  ndn_ind::Blob id2Key1;
+  ndn_ind::Blob id2Key2;
 };
 
 

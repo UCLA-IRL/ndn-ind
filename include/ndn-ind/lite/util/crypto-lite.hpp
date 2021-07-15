@@ -37,7 +37,7 @@
 #include "blob-lite.hpp"
 #include "../../c/errors.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * CryptoLite has static methods for basic cryptography operations.

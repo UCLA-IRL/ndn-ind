@@ -47,8 +47,8 @@
 #include <ndn-ind/threadsafe-face.hpp>
 
 using namespace std;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 /**
  * Counter counts the number of calls to the onData or onTimeout callbacks.
@@ -61,7 +61,7 @@ public:
    * onData or onTimeout.
    */
   Counter(boost::asio::io_service& ioService, int maxCallbackCount)
-  : ioService_(ioService), 
+  : ioService_(ioService),
     maxCallbackCount_(maxCallbackCount),
     callbackCount_(0)
   {

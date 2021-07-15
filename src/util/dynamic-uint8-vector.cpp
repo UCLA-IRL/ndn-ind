@@ -23,7 +23,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 DynamicUInt8Vector::DynamicUInt8Vector(size_t initialLength)
 : vector_(new vector<uint8_t>())

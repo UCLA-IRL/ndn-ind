@@ -38,7 +38,7 @@
 #include "../../c/errors.h"
 #include "../../c/security/ec-private-key-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An EcPrivateKeyLite holds a decoded or generated EC private key for use in

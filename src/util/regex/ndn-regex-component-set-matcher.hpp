@@ -26,7 +26,7 @@
 #include "ndn-regex-component-matcher.hpp"
 #include "ndn-regex-matcher-base.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class NdnRegexComponentSetMatcher : public NdnRegexMatcherBase {
 public:

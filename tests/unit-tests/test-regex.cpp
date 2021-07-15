@@ -29,14 +29,14 @@
 #include "gtest/gtest.h"
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 class TestRegex : public ::testing::Test {
 };
 
 TEST_F(TestRegex, ComponentMatcher)
 {
-  ptr_lib::shared_ptr<NdnRegexBackrefManager> backRef = 
+  ptr_lib::shared_ptr<NdnRegexBackrefManager> backRef =
     ptr_lib::make_shared<NdnRegexBackrefManager>();
   ptr_lib::shared_ptr<NdnRegexComponentMatcher> cm =
     ptr_lib::make_shared<NdnRegexComponentMatcher>("a", backRef);

@@ -37,7 +37,7 @@
 
 #include "../c/network-nack-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 class LpPacketLite;
 

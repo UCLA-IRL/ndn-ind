@@ -48,8 +48,8 @@ namespace ndntools {
  */
 class PrefixDiscovery {
 public:
-  typedef ndn::func_lib::function<void
-    (const ndn::ptr_lib::shared_ptr<std::vector<ndn::Name> >& prefixes)> OnPrefixes;
+  typedef ndn_ind::func_lib::function<void
+    (const ndn_ind::ptr_lib::shared_ptr<std::vector<ndn_ind::Name> >& prefixes)> OnPrefixes;
 
   /**
    * Create a PrefixDiscovery to use the given OnPrefixes callback and face.
@@ -63,7 +63,7 @@ public:
    * current list of prefixes. If omitted, use the default one minute.
    */
   PrefixDiscovery
-    (OnPrefixes onPrefixes, ndn::Face* face,
+    (OnPrefixes onPrefixes, ndn_ind::Face* face,
      std::chrono::nanoseconds period = std::chrono::minutes(1))
   : impl_(new Impl(onPrefixes, face, period))
   {
@@ -91,9 +91,9 @@ private:
    * class so that PrefixDiscovery can create an instance in a shared_ptr to
    * use in callbacks.
    */
-  class Impl : public ndn::ptr_lib::enable_shared_from_this<Impl> {
+  class Impl : public ndn_ind::ptr_lib::enable_shared_from_this<Impl> {
   public:
-    Impl(OnPrefixes onPrefixes, ndn::Face* face,
+    Impl(OnPrefixes onPrefixes, ndn_ind::Face* face,
          std::chrono::nanoseconds period)
     : onPrefixes_(onPrefixes), face_(face),
       period_(period), isEnabled_(false)
@@ -119,20 +119,20 @@ private:
 
     void
     onData
-      (const ndn::ptr_lib::shared_ptr<const ndn::Interest>& interest,
-       const ndn::ptr_lib::shared_ptr<ndn::Data>& data);
+      (const ndn_ind::ptr_lib::shared_ptr<const ndn_ind::Interest>& interest,
+       const ndn_ind::ptr_lib::shared_ptr<ndn_ind::Data>& data);
 
     void
-    onTimeout(const ndn::ptr_lib::shared_ptr<const ndn::Interest>& interest);
+    onTimeout(const ndn_ind::ptr_lib::shared_ptr<const ndn_ind::Interest>& interest);
 
     OnPrefixes onPrefixes_;
-    ndn::Face* face_;
+    ndn_ind::Face* face_;
     std::chrono::nanoseconds period_;
-    std::vector<ndn::Name> prefixes_;
+    std::vector<ndn_ind::Name> prefixes_;
     bool isEnabled_;
   };
 
-  ndn::ptr_lib::shared_ptr<Impl> impl_;
+  ndn_ind::ptr_lib::shared_ptr<Impl> impl_;
 };
 
 }

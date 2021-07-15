@@ -38,7 +38,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 Tpm::Tpm
   (const std::string& scheme, const std::string& location,

@@ -25,7 +25,7 @@
 
 #include "ndn-regex-matcher-base.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class NdnRegexBackrefManager {
 public:

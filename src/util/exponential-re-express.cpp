@@ -38,9 +38,9 @@ INIT_LOGGER("ndn.ExponentialReExpress");
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn::func_lib;
+using namespace ndn_ind::func_lib;
 
-namespace ndn {
+namespace ndn_ind {
 
 OnTimeout
 ExponentialReExpress::makeOnTimeout

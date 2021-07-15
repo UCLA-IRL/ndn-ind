@@ -24,7 +24,7 @@
 #include "../util/dynamic-uint8-array-lite.hpp"
 #include "element-listener-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An ElementReaderLite lets the application call onReceivedData() which calls

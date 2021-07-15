@@ -43,7 +43,7 @@
 class TestPibKeyContainer_Basic_Test;
 class TestPibKeyContainer_Errors_Test;
 
-namespace ndn {
+namespace ndn_ind {
 
 class PibKeyImpl;
 

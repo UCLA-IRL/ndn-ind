@@ -38,7 +38,7 @@
 #include "../../name.hpp"
 #include "../security-common.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * TpmKeyHandle is an abstract base class for a TPM key handle, which provides

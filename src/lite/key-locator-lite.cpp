@@ -34,7 +34,7 @@
 #include "../c/key-locator.h"
 #include <ndn-ind/lite/key-locator-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 KeyLocatorLite::KeyLocatorLite
   (ndn_NameComponent* keyNameComponents, size_t maxKeyNameComponents)

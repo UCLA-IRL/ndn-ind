@@ -36,7 +36,7 @@
 
 #include "certificate-fetcher.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * CertificateFetcherOffline extends CertificateFetcher to implement a fetcher

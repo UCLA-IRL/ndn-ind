@@ -40,7 +40,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 void
 KeyLocator::get(KeyLocatorLite& keyLocatorLite) const

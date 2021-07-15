@@ -39,7 +39,7 @@
 #include "../name.hpp"
 #include "security-common.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * KeyParams is a base class for key parameters. Its subclasses are used to

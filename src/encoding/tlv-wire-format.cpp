@@ -33,7 +33,7 @@
 
 #include <ndn-ind/encoding/tlv-wire-format.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 // This is declared in the WireFormat class.
 WireFormat*

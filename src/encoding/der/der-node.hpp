@@ -41,7 +41,7 @@
 #include "../../util/dynamic-uint8-vector.hpp"
 #include "der-node-type.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * DerNode implements the DER node types used in encoding/decoding DER-formatted

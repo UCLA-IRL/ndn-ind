@@ -37,7 +37,7 @@
 #include "data.hpp"
 #include "delegation-set.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * The Link class extends Data and represents a Link instance where the Data

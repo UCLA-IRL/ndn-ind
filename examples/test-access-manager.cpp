@@ -37,7 +37,7 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
+using namespace ndn_ind;
 
 /**
  * Get the certificates of the group members.

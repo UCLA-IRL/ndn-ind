@@ -43,7 +43,7 @@
 
 #include <boost/asio/basic_waitable_timer.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 namespace scheduler {
 
 class ndn_ind_dll SteadyTimer : public boost::asio::basic_waitable_timer<MonotonicSteadyClock>
@@ -53,7 +53,7 @@ public:
 };
 
 } // namespace scheduler
-} // namespace ndn
+} // namespace ndn_ind
 
 #endif // NDN_UTIL_IMPL_STEADY_TIMER_HPP
 

@@ -37,7 +37,7 @@
 #include <ndn-ind/control-response.hpp>
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 static uint8_t TestControlResponse1[] = {
   0x65, 0x1c, // ControlResponse

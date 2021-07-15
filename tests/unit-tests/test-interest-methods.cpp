@@ -44,8 +44,8 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 static const uint8_t codedInterest[] = {
 0x05, 0x5C, // Interest

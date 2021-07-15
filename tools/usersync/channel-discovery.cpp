@@ -45,8 +45,8 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 INIT_LOGGER("ndntools.ChannelDiscovery");
 
@@ -375,7 +375,7 @@ ChannelDiscovery::Impl::parseChannelList
     channelList.push_back(Name::fromEscapedString(str).toRawStr());
 }
 
-ndn::Blob
+ndn_ind::Blob
 ChannelDiscovery::Impl::readBase64Blob(const std::string& filePath)
 {
   ifstream file(filePath.c_str());

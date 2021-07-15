@@ -37,7 +37,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 // Only compile these constructors if we set NDN_IND_HAVE_REGEX_LIB in
 // ndn-regex-matcher-base.hpp.

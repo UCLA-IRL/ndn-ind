@@ -34,7 +34,7 @@
 #include "../c/data.h"
 #include <ndn-ind/lite/signature-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 SignatureLite::SignatureLite
   (ndn_NameComponent* keyNameComponents, size_t maxKeyNameComponents)

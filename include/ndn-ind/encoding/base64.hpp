@@ -38,7 +38,7 @@
 #include <vector>
 #include "../common.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * Return the base64 representation of the bytes in array.

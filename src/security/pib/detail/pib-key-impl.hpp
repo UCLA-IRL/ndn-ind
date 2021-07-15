@@ -41,7 +41,7 @@
 // Give friend access to the tests.
 class TestPibKeyImpl_CertificateOperation_Test;
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * PibKeyImpl provides the backend implementation for PibKey. A PibKey has only

@@ -37,7 +37,7 @@
 #include <deque>
 #include <ndn-ind/face.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 class DelayedCallTable {
 public:

@@ -22,7 +22,7 @@
 #include "lp-packet.hpp"
 #include "congestion-mark.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 CongestionMark::~CongestionMark() {}
 

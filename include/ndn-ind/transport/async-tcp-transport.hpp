@@ -44,7 +44,7 @@
 #include "../c/encoding/element-reader-types.h"
 #include "transport.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * AsyncTcpTransport extends Transport for async communication over TCP using

@@ -46,7 +46,7 @@
 #include "key-params.hpp"
 #include "safe-bag.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class PolicyManager;
 class ConfigFile;
@@ -457,7 +457,7 @@ public:
   /**
    * Get the default certificate name of the default identity.
    * @return The requested certificate name.
-   * @throws Pib::Error if the default identity is not set or the default key 
+   * @throws Pib::Error if the default identity is not set or the default key
    * name for the identity is not set or the default certificate name for the
    * key name is not set.
    */

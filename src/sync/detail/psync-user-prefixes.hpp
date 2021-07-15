@@ -38,7 +38,7 @@
 #include <map>
 #include <ndn-ind/name.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * PSyncUserPrefixes holds the prefixes_ map from prefix to sequence number,

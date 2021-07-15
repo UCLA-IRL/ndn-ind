@@ -40,7 +40,7 @@
 #include "../../interest.hpp"
 #include "certificate-v2.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A CertificateCacheV2 holds other user's verified certificates in security v2

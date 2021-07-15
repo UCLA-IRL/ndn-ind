@@ -39,7 +39,7 @@ using namespace std;
 
 INIT_LOGGER("ndn.PSyncUserPrefixes");
 
-namespace ndn {
+namespace ndn_ind {
 
 bool
 PSyncUserPrefixes::addUserNode(const Name& prefix)

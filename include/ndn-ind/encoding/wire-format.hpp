@@ -37,7 +37,7 @@
 #include "../common.hpp"
 #include "../util/blob.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class Name;
 class Interest;

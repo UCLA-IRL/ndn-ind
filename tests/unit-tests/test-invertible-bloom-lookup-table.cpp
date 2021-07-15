@@ -39,7 +39,7 @@
 #include "../../src/sync/detail/invertible-bloom-lookup-table.hpp"
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 class TestInvertibleBloomLookupTable : public ::testing::Test {
 };

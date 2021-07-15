@@ -39,9 +39,9 @@
 INIT_LOGGER("ndn.Validator");
 
 using namespace std;
-using namespace ndn::func_lib;
+using namespace ndn_ind::func_lib;
 
-namespace ndn {
+namespace ndn_ind {
 
 Validator::Validator
   (const ptr_lib::shared_ptr<ValidationPolicy>& policy,

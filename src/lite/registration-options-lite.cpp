@@ -34,7 +34,7 @@
 #include "../c/registration-options.h"
 #include <ndn-ind/lite/registration-options-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 RegistrationOptionsLite::RegistrationOptionsLite()
 {

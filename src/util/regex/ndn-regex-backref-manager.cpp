@@ -41,7 +41,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 ptr_lib::shared_ptr<NdnRegexMatcherBase>
 NdnRegexBackrefManager::getBackref(size_t i) const

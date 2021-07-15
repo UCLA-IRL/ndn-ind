@@ -43,7 +43,7 @@
 #include "../common.hpp"
 #include "transport.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 template<class AsioProtocol> class AsyncSocketTransport;
 

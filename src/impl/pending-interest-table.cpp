@@ -39,7 +39,7 @@ INIT_LOGGER("ndn.PendingInterestTable");
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 void
 PendingInterestTable::Entry::callTimeout()

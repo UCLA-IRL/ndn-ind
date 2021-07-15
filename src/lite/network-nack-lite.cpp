@@ -35,7 +35,7 @@
 #include <ndn-ind/lite/lp/lp-packet-lite.hpp>
 #include <ndn-ind/lite/network-nack-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 NetworkNackLite::NetworkNackLite()
 {

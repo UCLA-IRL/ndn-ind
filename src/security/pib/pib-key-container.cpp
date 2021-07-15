@@ -38,7 +38,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 PibKeyContainer::PibKeyContainer
   (const Name& identityName, const ptr_lib::shared_ptr<PibImpl>& pibImpl)

@@ -39,9 +39,9 @@
 INIT_LOGGER("ndn.CertificateFetcher");
 
 using namespace std;
-using namespace ndn::func_lib;
+using namespace ndn_ind::func_lib;
 
-namespace ndn {
+namespace ndn_ind {
 
 CertificateFetcher::~CertificateFetcher() {}
 

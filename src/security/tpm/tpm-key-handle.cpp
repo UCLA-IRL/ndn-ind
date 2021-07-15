@@ -34,7 +34,7 @@
 
 #include <ndn-ind/security/tpm/tpm-key-handle.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 TpmKeyHandle::~TpmKeyHandle() {}
 

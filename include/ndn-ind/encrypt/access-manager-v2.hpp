@@ -42,7 +42,7 @@
 // Give friend access to the tests.
 class TestAccessManagerV2_EnumerateDataFromInMemoryStorage_Test;
 
-namespace ndn {
+namespace ndn_ind {
 
 const std::chrono::nanoseconds DEFAULT_KEK_FRESHNESS_PERIOD =
   std::chrono::hours(1);
@@ -102,7 +102,7 @@ public:
    */
   AccessManagerV2
     (const ptr_lib::shared_ptr<PibIdentity>& identity, const Name& dataset,
-     KeyChain* keyChain, Face* face, 
+     KeyChain* keyChain, Face* face,
      ndn_EncryptAlgorithmType groupContentKeyAlgorithmType = (ndn_EncryptAlgorithmType)-1)
   : impl_(new Impl(identity, keyChain, face, groupContentKeyAlgorithmType))
   {

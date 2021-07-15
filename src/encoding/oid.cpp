@@ -38,7 +38,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 OID::OID(const string& oid)
 {

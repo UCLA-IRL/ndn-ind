@@ -52,7 +52,7 @@
 #include <ndn-ind/lite/encoding/tlv-0_2-wire-format-lite.hpp>
 #include <ndn-ind/lite/util/dynamic-malloc-uint8-array-lite.hpp>
 
-using namespace ndn;
+using namespace ndn_ind;
 
 /**
  * The ElementReceiver class extends ElementListenerLite and has an
@@ -189,7 +189,7 @@ main(int argc, char** argv)
     return error;
   }
 
-  // The main event loop. 
+  // The main event loop.
   // We're not using the Pending Interest Table in the main NDN-IND Face object,
   // so there is no automatic check for timeout. To keep this example
   // lightweight, we loop forever waiting for the Data packet. To check for

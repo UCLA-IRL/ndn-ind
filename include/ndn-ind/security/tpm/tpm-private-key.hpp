@@ -44,7 +44,7 @@
 #include "../../encoding/oid.hpp"
 #include "../../c/encrypt/algo/encrypt-params-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 class OID;
 class DerNode;

@@ -37,7 +37,7 @@
 
 #include <stdexcept>
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A ValidatorConfigError extends runtime_error and represents an error using

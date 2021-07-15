@@ -37,7 +37,7 @@
 #include <set>
 #include "certificate-v2.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class ndn_ind_dll CertificateContainerInterface
 {

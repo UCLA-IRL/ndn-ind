@@ -44,7 +44,7 @@ namespace google { namespace protobuf { template <typename Element> class Repeat
 namespace Sync { class SyncStateMsg; }
 namespace Sync { class SyncState; }
 
-namespace ndn {
+namespace ndn_ind {
 
 class DigestTree;
 

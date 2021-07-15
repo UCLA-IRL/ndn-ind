@@ -28,7 +28,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 string
 toBase64(const uint8_t* array, size_t arrayLength, bool addNewlines)

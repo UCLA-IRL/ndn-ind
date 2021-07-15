@@ -38,7 +38,7 @@
 #include "../../src/sync/detail/psync-state.hpp"
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 class TestPSyncState : public ::testing::Test {
 };

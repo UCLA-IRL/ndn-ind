@@ -41,7 +41,7 @@
 #include "pib/pib-key.hpp"
 #include "security-common.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A SigningInfo holds the signing parameters passed to the KeyChain. A

@@ -42,7 +42,7 @@
 // Give friend access to the tests.
 class TestValidator_ConstructorSetValidator_Test;
 
-namespace ndn {
+namespace ndn_ind {
 
 class Validator;
 

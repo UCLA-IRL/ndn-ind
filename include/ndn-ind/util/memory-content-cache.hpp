@@ -38,7 +38,7 @@
 #include <deque>
 #include "../face.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A MemoryContentCache holds a set of Data packets and answers an Interest to
@@ -59,7 +59,7 @@ public:
    * will not be removed from the cache.
    */
   MemoryContentCache
-    (Face* face, 
+    (Face* face,
      std::chrono::nanoseconds cleanupInterval = std::chrono::seconds(1))
   : impl_(new Impl(face, cleanupInterval))
   {
@@ -596,7 +596,7 @@ private:
 
     private:
       std::chrono::system_clock::time_point cacheRemovalTime_; /**< The time when the content
-        becomes stale and should be removed from the cache according to 
+        becomes stale and should be removed from the cache according to
         system_clock::now() */
       std::chrono::system_clock::time_point freshnessExpiryTime_; /**< The time when
         the freshness period of the content expires (independent of when to

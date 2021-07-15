@@ -45,7 +45,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 static CFTypeRef
 getAsymKeyType(KeyType keyType)

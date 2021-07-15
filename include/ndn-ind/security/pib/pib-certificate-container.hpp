@@ -44,7 +44,7 @@ class TestPibCertificateContainer_Basic_Test;
 class TestPibCertificateContainer_Errors_Test;
 class TestKeyChain_Management_Test;
 
-namespace ndn {
+namespace ndn_ind {
 
 class PibImpl;
 class PibKey;

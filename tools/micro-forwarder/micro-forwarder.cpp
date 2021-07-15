@@ -34,8 +34,8 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 INIT_LOGGER("ndntools.MicroForwarder");
 
@@ -275,12 +275,12 @@ MicroForwarder::onReceivedElement
     // Check for a duplicate Interest.
     system_clock::time_point timeoutEndTime;
     if (interest->getInterestLifetime().count() >= 0)
-      timeoutEndTime = now + 
+      timeoutEndTime = now +
         duration_cast<system_clock::duration>(interest->getInterestLifetime());
     else
       // Use a default timeout.
       timeoutEndTime = now + seconds(4);
-    system_clock::time_point entryEndTime = 
+    system_clock::time_point entryEndTime =
       now + duration_cast<system_clock::duration>(minPitEntryLifetime_);
     bool isDuplicateInterest = false;
     for (int i = 0; i < PIT_.size(); ++i) {
@@ -334,7 +334,7 @@ MicroForwarder::onReceivedElement
           _LOG_INFO("Unrecognized outFaceId_ " << microForwarderTransport->outFaceId_);
           return;
         }
-        
+
         _LOG_DEBUG("Forwarded Interest to specified face " <<
           microForwarderTransport->outFaceId_ << ": " << interest->getName());
         // Forward the full element including any LP header.

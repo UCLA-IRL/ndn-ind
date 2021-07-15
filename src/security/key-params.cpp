@@ -37,7 +37,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 KeyParams::KeyParams(KeyType keyType, KeyIdType keyIdType)
 : keyType_(keyType),

@@ -42,7 +42,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 TpmKeyHandleOsx::TpmKeyHandleOsx(const KeyRefOsx& key)
 : key_(key)

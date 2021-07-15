@@ -51,8 +51,8 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 using namespace ndntools;
 
 static void
@@ -174,7 +174,7 @@ int main(int argc, char** argv)
     applicationDataPrefix.append(username).append("flume").append("discovery");
     auto syncLifetime = seconds(5);
     ChannelDiscovery channelDiscovery
-      (applicationDataPrefix, channelListFilePath, 
+      (applicationDataPrefix, channelListFilePath,
        Name("/ndn/broadcast/flume/discovery"), face, keyChain, certificateName,
        syncLifetime, bind(&onReceivedChannelList, _1, _2),
        bind(&onError, _1, _2, &enabled));

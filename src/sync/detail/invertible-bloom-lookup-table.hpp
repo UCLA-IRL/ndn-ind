@@ -67,7 +67,7 @@
 #include <set>
 #include <ndn-ind/util/blob.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * InvertibleBloomLookupTable implements an Invertible Bloom Lookup Table (IBLT)

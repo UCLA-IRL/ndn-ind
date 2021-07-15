@@ -38,11 +38,11 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn::func_lib;
+using namespace ndn_ind::func_lib;
 
 INIT_LOGGER("ndn.MemoryContentCache");
 
-namespace ndn {
+namespace ndn_ind {
 
 MemoryContentCache::Impl::Impl
   (Face* face, nanoseconds cleanupInterval)

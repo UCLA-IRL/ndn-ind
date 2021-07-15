@@ -34,7 +34,7 @@
 #include "../c/delegation-set.h"
 #include <ndn-ind/lite/delegation-set-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 DelegationSetLite::Delegation::Delegation
   (ndn_NameComponent* nameComponents, size_t maxNameComponents)

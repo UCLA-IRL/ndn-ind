@@ -36,7 +36,7 @@
 
 #include "tlv-0_3-wire-format-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A Tlv0_2WireFormatLite implements implement encoding and decoding using

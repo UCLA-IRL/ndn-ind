@@ -38,7 +38,7 @@
 #include "encoding/wire-format.hpp"
 #include "lite/control-response-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A ControlResponse holds a status code, status text and other fields for a

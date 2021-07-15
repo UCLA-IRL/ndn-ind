@@ -41,7 +41,7 @@
 #include "congestion-mark-lite.hpp"
 #include "../../c/lp/lp-packet-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 class ndn_ind_dll LpPacketHeaderFieldLite : private ndn_LpPacketHeaderField {
 public:

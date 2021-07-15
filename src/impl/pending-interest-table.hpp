@@ -36,7 +36,7 @@
 
 #include <ndn-ind/face.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A PendingInterestTable is an internal class to hold a list of pending

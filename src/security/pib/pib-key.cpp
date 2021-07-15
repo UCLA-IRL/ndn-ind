@@ -38,7 +38,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 PibKey::PibKey(ptr_lib::weak_ptr<PibKeyImpl> impl)
 : impl_(impl)

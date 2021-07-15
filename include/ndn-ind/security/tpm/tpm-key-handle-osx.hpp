@@ -42,7 +42,7 @@
 #include "helper-osx.hpp"
 #include "tpm-key-handle.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * TpmKeyHandleMemory extends TpmKeyHandle to implement a TPM key handle that

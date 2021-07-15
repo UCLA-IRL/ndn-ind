@@ -34,7 +34,7 @@
 #include "../c/interest.h"
 #include <ndn-ind/lite/exclude-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 ExcludeLite::Entry::Entry()
 {

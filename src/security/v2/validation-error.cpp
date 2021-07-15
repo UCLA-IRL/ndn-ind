@@ -37,7 +37,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 ostream&
 operator<<(ostream& os, const ValidationError& error)

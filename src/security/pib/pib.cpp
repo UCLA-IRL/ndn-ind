@@ -37,7 +37,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 Pib::Pib(const string& scheme, const string& location,
          const ptr_lib::shared_ptr<PibImpl>& pibImpl)

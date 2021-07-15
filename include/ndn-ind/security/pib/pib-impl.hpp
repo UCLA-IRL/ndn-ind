@@ -40,7 +40,7 @@
 #include "pib.hpp"
 #include "../v2/certificate-v2.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * PibImpl is an abstract base class for the PIB implementation used by the Pib

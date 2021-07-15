@@ -44,7 +44,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 UnixTransport::ConnectionInfo::~ConnectionInfo()
 {

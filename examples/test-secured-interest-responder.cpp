@@ -40,7 +40,7 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
+using namespace ndn_ind;
 
 /**
  * Add a hard-coded identity to the KeyChain for the responder and return its
@@ -182,7 +182,7 @@ getResponderName(KeyChain& keyChain)
   };
 
   SafeBag secondMemberSafeBag
-    (ndn::Blob(secondMemberSafeBagEncoding, sizeof(secondMemberSafeBagEncoding)));
+    (ndn_ind::Blob(secondMemberSafeBagEncoding, sizeof(secondMemberSafeBagEncoding)));
   string safeBagPassword = "password";
   keyChain.importSafeBag
     (secondMemberSafeBag, (const uint8_t*)safeBagPassword.c_str(),
@@ -311,7 +311,7 @@ main(int argc, char** argv)
        validator.get(), nacKeyChain.get(), &face, ndn_EncryptAlgorithmType_AesCbc);
     encryptor->setCheckForNewGckInterval(checkGckInterval);
     // Create the DecryptorV2 to decrypt the secured Interest.
-    auto decryptor = ptr_lib::make_shared<ndn::DecryptorV2>
+    auto decryptor = ptr_lib::make_shared<ndn_ind::DecryptorV2>
       (nacKeyChain->getPib().getIdentity(responderName)->getDefaultKey().get(),
        validator.get(), nacKeyChain.get(), &face, encryptor.get());
 
@@ -325,12 +325,12 @@ main(int argc, char** argv)
              // The Interest signature is valid. Now decrypt.
              onInterest(interest, &interestFace, encryptor, decryptor, nacKeyChain.get());
            },
-           [](auto&, auto& error) { 
+           [](auto&, auto& error) {
              cout << "Validate Interest failure: " << error.toString() << endl;
              isRunning = false;
            });
       },
-      [](auto& p) { 
+      [](auto& p) {
         cout << "Register failed for " << p->toUri() << endl;
         isRunning = false;
       });

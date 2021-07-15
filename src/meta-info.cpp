@@ -37,14 +37,14 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 void
 MetaInfo::get(MetaInfoLite& metaInfoLite) const
 {
   // Set the deprecated timestamp from the struct ndn_MetaInfo since
   //   MetaInfoLite doesn't expose it.
-  ((struct ndn_MetaInfo *)&metaInfoLite)->timestampMilliseconds = 
+  ((struct ndn_MetaInfo *)&metaInfoLite)->timestampMilliseconds =
     toMillisecondsSince1970(timestamp_);
   metaInfoLite.setType(type_);
   metaInfoLite.setOtherTypeCode(otherTypeCode_);

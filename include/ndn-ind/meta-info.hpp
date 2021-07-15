@@ -39,7 +39,7 @@
 #include "c/data-types.h"
 #include "lite/meta-info-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A MetaInfo holds the meta info which is signed inside the data packet.

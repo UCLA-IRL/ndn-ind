@@ -36,7 +36,7 @@
 
 #include "tlv-0_3-wire-format.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A Tlv0_2WireFormat extends WireFormat to override its virtual methods to

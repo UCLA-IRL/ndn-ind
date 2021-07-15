@@ -46,7 +46,7 @@
 
 struct sqlite3;
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * PibSqlite3 extends PibImpl and is used by the Pib class as an implementation

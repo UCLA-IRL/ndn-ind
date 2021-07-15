@@ -42,7 +42,7 @@
 #include "../../c/common.h"
 #include <functional>
 
-namespace ndn {
+namespace ndn_ind {
 namespace scheduler {
 
 /** \brief Handle to cancel an operation.
@@ -114,7 +114,7 @@ private:
 };
 
 } // namespace scheduler
-} // namespace ndn
+} // namespace ndn_ind
 
 #endif // NDN_DETAIL_CANCEL_HANDLE_HPP
 

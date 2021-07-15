@@ -37,7 +37,7 @@
 using namespace std;
 using namespace std::chrono;
 
-namespace ndn {
+namespace ndn_ind {
 
 void
 CommandInterestGenerator::generate

@@ -43,7 +43,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * Convert the hex character to an integer from 0 to 15, or -1 if not a hex character.

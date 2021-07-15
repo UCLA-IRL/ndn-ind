@@ -45,7 +45,7 @@
 #include <ndn-ind-tools/usersync/prefix-discovery.hpp>
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 using namespace ndntools;
 
 static void

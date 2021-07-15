@@ -38,7 +38,7 @@
 #include "registration-options-lite.hpp"
 #include "../c/control-parameters-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A ControlParametersLite holds a Name and other fields for a

@@ -38,7 +38,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 TpmKeyHandleMemory::TpmKeyHandleMemory
   (const ptr_lib::shared_ptr<TpmPrivateKey>& key)

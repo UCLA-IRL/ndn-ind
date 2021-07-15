@@ -24,7 +24,7 @@
 
 #if NDN_IND_HAVE_LIBCRYPTO
 
-namespace ndn {
+namespace ndn_ind {
 
 ndn_Error
 ChaCha20AlgorithmLite::decryptPoly1305

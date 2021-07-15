@@ -43,8 +43,8 @@
 #include <ndn-ind/security/validator-config.hpp>
 
 using namespace std;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 static bool
 fileExists(const string& filePath)

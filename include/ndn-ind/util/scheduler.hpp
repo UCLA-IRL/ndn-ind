@@ -48,7 +48,7 @@
 #include <boost/noncopyable.hpp>
 #include <set>
 
-namespace ndn {
+namespace ndn_ind {
 
 namespace scheduler {
 
@@ -198,7 +198,7 @@ private:
 
 } // namespace scheduler
 
-} // namespace ndn
+} // namespace ndn_ind
 
 #endif // NDN_UTIL_SCHEDULER_HPP
 

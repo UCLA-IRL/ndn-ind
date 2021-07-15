@@ -38,7 +38,7 @@
 #include "../../c/transport/tcp-transport.h"
 #include <ndn-ind/lite/transport/tcp-transport-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 TcpTransportLite::TcpTransportLite(DynamicUInt8ArrayLite& buffer, bool readRawPackets)
 {

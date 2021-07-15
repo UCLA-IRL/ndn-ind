@@ -38,7 +38,7 @@
 #include "../common.hpp"
 #include "../encoding/element-listener.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A Transport object is used by Face to send packets and to listen for incoming

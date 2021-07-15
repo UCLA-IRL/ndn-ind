@@ -36,7 +36,7 @@
 #include "../../c/errors.h"
 #include "../../c/util/dynamic-uint8-array-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A DynamicUInt8ArrayLite holds a pointer to an allocated array, the length of

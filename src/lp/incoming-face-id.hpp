@@ -39,7 +39,7 @@
 #include <ndn-ind/lite/lp/incoming-face-id-lite.hpp>
 #include <ndn-ind/lp-packet-header-field.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 class LpPacket;
 

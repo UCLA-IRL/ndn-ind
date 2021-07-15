@@ -37,8 +37,8 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 ValidatorFixture::ValidatorFixture
   (const ptr_lib::shared_ptr<ValidationPolicy>& policy)
@@ -53,8 +53,8 @@ ValidatorFixture::ValidatorFixture
 
 void
 ValidatorFixture::processInterestFromCache
-  (const ndn::Interest& interest, const ndn::OnData& onData,
-   const ndn::OnTimeout& onTimeout, const ndn::OnNetworkNack& onNetworkNack)
+  (const ndn_ind::Interest& interest, const ndn_ind::OnData& onData,
+   const ndn_ind::OnTimeout& onTimeout, const ndn_ind::OnNetworkNack& onNetworkNack)
 {
   ptr_lib::shared_ptr<CertificateV2> certificate = cache_.find(interest);
   if (certificate)

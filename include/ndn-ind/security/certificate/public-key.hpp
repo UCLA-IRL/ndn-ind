@@ -39,7 +39,7 @@
 #include "../../encoding/oid.hpp"
 #include "../security-common.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class DerNode;
 

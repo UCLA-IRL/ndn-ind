@@ -24,7 +24,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 DerException::DerException(const string& errorMessage) throw()
   : errorMessage_(errorMessage)

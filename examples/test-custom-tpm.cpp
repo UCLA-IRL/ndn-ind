@@ -39,8 +39,8 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 static uint8_t TEST_CERTIFICATE[] = {
   0x06, 0xfd, 0x02, 0xa7, 0x07, 0x25, 0x08, 0x08, 0x74, 0x65, 0x73, 0x74, 0x6e, 0x61, 0x6d, 0x65,

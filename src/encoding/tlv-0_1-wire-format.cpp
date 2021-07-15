@@ -35,7 +35,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 Tlv0_1WireFormat* Tlv0_1WireFormat::instance_ = 0;
 

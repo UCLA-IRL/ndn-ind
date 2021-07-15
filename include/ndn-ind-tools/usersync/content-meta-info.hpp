@@ -88,7 +88,7 @@ public:
    * Get the Blob containing the optional other info.
    * @return The other info. If not specified, return an isNull Blob.
    */
-  const ndn::Blob&
+  const ndn_ind::Blob&
   getOther() const { return other_; }
 
   /**
@@ -133,7 +133,7 @@ public:
    * @return This ContentMetaInfo so that you can chain calls to update values.
    */
   ContentMetaInfo&
-  setOther(const ndn::Blob& other)
+  setOther(const ndn_ind::Blob& other)
   {
     other_ = other;
     return *this;
@@ -149,7 +149,7 @@ public:
    * Encode this ContentMetaInfo.
    * @return The encoded byte array.
    */
-  ndn::Blob
+  ndn_ind::Blob
   wireEncode() const;
 
   /**
@@ -175,7 +175,7 @@ public:
    * @param input The input byte array to be decoded as an immutable Blob.
    */
   void
-  wireDecode(const ndn::Blob& input)
+  wireDecode(const ndn_ind::Blob& input)
   {
     wireDecode(input.buf(), input.size());
   }
@@ -184,7 +184,7 @@ private:
   std::string contentType_;
   std::chrono::system_clock::time_point timestamp_;
   bool hasSegments_;
-  ndn::Blob other_;
+  ndn_ind::Blob other_;
 };
 
 }

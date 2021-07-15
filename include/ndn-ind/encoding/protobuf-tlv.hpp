@@ -39,7 +39,7 @@
 
 namespace google { namespace protobuf { class Message; } }
 
-namespace ndn {
+namespace ndn_ind {
 
 /** ProtobufTlv has static methods to encode and decode an Protobuf Message
  * object as NDN-TLV. The Protobuf tag value is used as the TLV type code. A

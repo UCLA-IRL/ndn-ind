@@ -34,7 +34,7 @@
 #include "../c/interest.h"
 #include <ndn-ind/lite/interest-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 InterestLite::InterestLite
   (ndn_NameComponent *nameComponents, size_t maxNameComponents,

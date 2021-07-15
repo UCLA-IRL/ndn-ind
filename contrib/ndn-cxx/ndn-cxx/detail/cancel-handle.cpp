@@ -37,7 +37,7 @@
 
 #include <ndn-ind/util/impl/cancel-handle.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 namespace scheduler {
 
 CancelHandle::CancelHandle(std::function<void()> cancel)
@@ -92,6 +92,6 @@ ScopedCancelHandle::release()
 }
 
 } // namespace scheduler
-} // namespace ndn
+} // namespace ndn_ind
 
 #endif // NDN_IND_HAVE_BOOST

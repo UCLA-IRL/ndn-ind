@@ -37,7 +37,7 @@
 
 #include "../../../name.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /** ConfigNameRelation defines the ConfigNameRelation::Relation enum and static
  * methods to work with name relations for the ValidatorConfig.

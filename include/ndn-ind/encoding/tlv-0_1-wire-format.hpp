@@ -36,7 +36,7 @@
 
 #include "tlv-0_1_1-wire-format.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A Tlv0_1WireFormat extends Tlv0_1_1WireFormat so that it is an alias in case

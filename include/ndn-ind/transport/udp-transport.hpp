@@ -40,7 +40,7 @@
 
 struct ndn_UdpTransport;
 
-namespace ndn {
+namespace ndn_ind {
 
 class DynamicUInt8Vector;
 

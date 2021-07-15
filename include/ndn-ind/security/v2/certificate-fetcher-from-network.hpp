@@ -38,7 +38,7 @@
 #include "../../face.hpp"
 #include "certificate-fetcher.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * CertificateFetcherFromNetwork extends CertificateFetcher to fetch missing

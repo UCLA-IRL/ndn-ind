@@ -26,7 +26,7 @@
 #include <ndn-ind/encoding/base64.hpp>
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 /**
  * Add a certificate from a base64 encoding file to the default PIB. If the PIB
@@ -65,6 +65,6 @@ int main(int argc, char* argv[])
   pibImpl.setDefaultCertificateOfKey(certificate.getKeyName(), certificate.getName());
   cout << "Certificate has been added and set as default for the key:\n  " <<
     certificate.getName() << endl;
-  
+
   return 0;
 }

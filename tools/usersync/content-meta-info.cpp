@@ -43,7 +43,7 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
+using namespace ndn_ind;
 
 extern "C" {
 

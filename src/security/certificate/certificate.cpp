@@ -43,7 +43,7 @@
 using namespace std;
 using namespace std::chrono;
 
-namespace ndn {
+namespace ndn_ind {
 
 typedef DerNode::DerSequence DerSequence;
 typedef DerNode::DerGeneralizedTime DerGeneralizedTime;

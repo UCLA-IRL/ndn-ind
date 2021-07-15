@@ -23,7 +23,7 @@
 #include "encrypt-static-data.hpp"
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 EncryptStaticData *EncryptStaticData::instance_ = 0;
 

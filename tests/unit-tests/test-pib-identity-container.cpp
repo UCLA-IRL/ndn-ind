@@ -40,7 +40,7 @@
 #include "pib-data-fixture.hpp"
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 class TestPibIdentityContainer : public ::testing::Test {
 public:

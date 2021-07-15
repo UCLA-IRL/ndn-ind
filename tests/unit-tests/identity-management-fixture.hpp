@@ -50,7 +50,7 @@ public:
   ~IdentityManagementFixture();
 
   bool
-  saveCertificateToFile(const ndn::Data& data, const std::string& filePath);
+  saveCertificateToFile(const ndn_ind::Data& data, const std::string& filePath);
 
   /**
    * Add an identity for the identityName.
@@ -59,10 +59,10 @@ public:
    * for the identity. If omitted, use getDefaultKeyParams().
    * @return The created PibIdentity instance.
    */
-  ndn::ptr_lib::shared_ptr<ndn::PibIdentity>
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::PibIdentity>
   addIdentity
-    (const ndn::Name& identityName, 
-     const ndn::KeyParams& params = ndn::KeyChain::getDefaultKeyParams());
+    (const ndn_ind::Name& identityName,
+     const ndn_ind::KeyParams& params = ndn_ind::KeyChain::getDefaultKeyParams());
 
   /**
    *  Save the identity's certificate to a file.
@@ -71,7 +71,7 @@ public:
    *  @return True if successful.
    */
   bool
-  saveCertificate(ndn::PibIdentity identity, const std::string& filePath);
+  saveCertificate(ndn_ind::PibIdentity identity, const std::string& filePath);
 
   /**
    * Issue a certificate for subIdentityName signed by issuer. If the identity
@@ -84,11 +84,11 @@ public:
    * for the identity. If omitted, use getDefaultKeyParams().
    * @return The sub identity.
    */
-  ndn::ptr_lib::shared_ptr<ndn::PibIdentity>
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::PibIdentity>
   addSubCertificate
-    (const ndn::Name& subIdentityName, 
-     const ndn::ptr_lib::shared_ptr<ndn::PibIdentity>& issuer,
-     const ndn::KeyParams& params = ndn::KeyChain::getDefaultKeyParams());
+    (const ndn_ind::Name& subIdentityName,
+     const ndn_ind::ptr_lib::shared_ptr<ndn_ind::PibIdentity>& issuer,
+     const ndn_ind::KeyParams& params = ndn_ind::KeyChain::getDefaultKeyParams());
 
   /**
    * Add a self-signed certificate made from the key and issuer ID.
@@ -96,14 +96,14 @@ public:
    * @param issuerId The issuer ID name component for the certificate name.
    * @return The new certificate.
    */
-  ndn::ptr_lib::shared_ptr<ndn::CertificateV2>
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::CertificateV2>
   addCertificate
-    (ndn::ptr_lib::shared_ptr<ndn::PibKey>& key, const std::string& issuerId);
+    (ndn_ind::ptr_lib::shared_ptr<ndn_ind::PibKey>& key, const std::string& issuerId);
 
-  ndn::KeyChain keyChain_;
+  ndn_ind::KeyChain keyChain_;
 
 private:
-  std::set<ndn::Name> identityNames_;
+  std::set<ndn_ind::Name> identityNames_;
   std::set<std::string> certificateFiles_;
 };
 

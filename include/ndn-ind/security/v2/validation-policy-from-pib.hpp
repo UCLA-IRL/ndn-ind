@@ -37,7 +37,7 @@
 #include "../pib/pib.hpp"
 #include "validation-policy.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * ValidationPolicyFromPib extends ValidationPolicy to implement a validator

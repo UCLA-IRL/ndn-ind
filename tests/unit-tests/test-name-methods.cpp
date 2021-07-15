@@ -40,7 +40,7 @@
 #include <ndn-ind/encoding/tlv-wire-format.hpp>
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 static const uint8_t COMP2[] = { 0x00, 0x01, 0x02, 0x03 };
 

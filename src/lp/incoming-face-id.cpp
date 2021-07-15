@@ -22,7 +22,7 @@
 #include "lp-packet.hpp"
 #include "incoming-face-id.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 IncomingFaceId::~IncomingFaceId() {}
 

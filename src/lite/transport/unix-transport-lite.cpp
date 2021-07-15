@@ -38,7 +38,7 @@
 #include "../../c/transport/unix-transport.h"
 #include <ndn-ind/lite/transport/unix-transport-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 UnixTransportLite::UnixTransportLite(DynamicUInt8ArrayLite& buffer, bool readRawPackets)
 {

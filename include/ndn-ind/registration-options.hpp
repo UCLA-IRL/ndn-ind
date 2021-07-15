@@ -36,7 +36,7 @@
 
 #include "lite/registration-options-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A RegistrationOptions holds the options used when registering with the

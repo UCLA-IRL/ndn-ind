@@ -34,7 +34,7 @@
 #include "../../c/lp/lp-packet.h"
 #include <ndn-ind/lite/lp/lp-packet-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 LpPacketLite::LpPacketLite
   (struct ndn_LpPacketHeaderField* headerFields, size_t maxHeaderFields)

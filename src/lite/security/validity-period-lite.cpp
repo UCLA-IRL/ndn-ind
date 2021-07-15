@@ -34,7 +34,7 @@
 #include "../../c/security/validity-period.h"
 #include <ndn-ind/lite/security/validity-period-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 ValidityPeriodLite::ValidityPeriodLite()
 {

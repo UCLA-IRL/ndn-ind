@@ -41,7 +41,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 Sqlite3Statement::Sqlite3Statement(sqlite3* database, const string& statement)
 {

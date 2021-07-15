@@ -37,7 +37,7 @@
 #include "name-lite.hpp"
 #include "../c/key-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A KeyLocatorLite holds a type and other info to represent the key which signs

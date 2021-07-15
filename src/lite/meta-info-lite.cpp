@@ -34,7 +34,7 @@
 #include "../c/data.h"
 #include <ndn-ind/lite/meta-info-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 MetaInfoLite::MetaInfoLite()
 {

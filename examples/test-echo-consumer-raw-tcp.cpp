@@ -37,7 +37,7 @@
 #include <ndn-ind/transport/tcp-transport.hpp>
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 /**
  * MyElementListener extends ElementListener and overrides onReceivedElement

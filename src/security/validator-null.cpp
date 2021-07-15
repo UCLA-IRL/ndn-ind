@@ -37,7 +37,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 ValidatorNull::ValidatorNull()
 : Validator(ptr_lib::make_shared<ValidationPolicyAcceptAll>(),

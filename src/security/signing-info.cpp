@@ -38,7 +38,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 SigningInfo::SigningInfo(const string& signingString)
 {

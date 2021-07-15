@@ -36,7 +36,7 @@
 
 #include "tlv-0_2-wire-format-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A Tlv0_1_1WireFormatLite extends Tlv0_2WireFormatLite so that it is an alias

@@ -38,7 +38,7 @@
 #include "validation-policy.hpp"
 #include "validator-config/config-rule.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class BoostInfoTree;
 

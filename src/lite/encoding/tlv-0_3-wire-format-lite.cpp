@@ -23,7 +23,7 @@
 #include "../../c/encoding/tlv-0_3-wire-format.h"
 #include <ndn-ind/lite/encoding/tlv-0_3-wire-format-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 //
 // Use existing format v0.2 methods unless we need v0.3.

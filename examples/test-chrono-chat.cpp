@@ -60,8 +60,8 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 // Define the Chat class here so that the ChronoChat demo is self-contained.
 
@@ -746,7 +746,7 @@ int main(int argc, char** argv)
     face.setCommandSigningInfo(keyChain, keyChain.getDefaultCertificateName());
 
     ptr_lib::shared_ptr<Chat> chat(new Chat
-      (screenName, chatRoom, Name(hubPrefix), face, keyChain, 
+      (screenName, chatRoom, Name(hubPrefix), face, keyChain,
        keyChain.getDefaultCertificateName()));
     chat->initialize();
 

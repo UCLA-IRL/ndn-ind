@@ -37,7 +37,7 @@
 #include <ndn-ind/name.hpp>
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 class TestNameConventions : public ::testing::Test {
 };

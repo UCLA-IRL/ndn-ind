@@ -38,8 +38,8 @@
 #include <ndn-ind/security/validator-null.hpp>
 
 using namespace std;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 class TestValidatorNull : public ::testing::Test {
 public:
@@ -81,7 +81,7 @@ TEST_F(TestValidatorNull, ValidateData)
 
   ValidatorNull validator;
   validator.validate
-    (data, 
+    (data,
      bind(&TestValidatorNull::dataShouldSucceed, this, _1),
      bind(&TestValidatorNull::dataShouldNotFail, this, _1, _2));
 }

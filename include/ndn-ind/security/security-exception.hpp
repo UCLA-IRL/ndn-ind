@@ -39,7 +39,7 @@
 #include <exception>
 #include <string>
 
-namespace ndn {
+namespace ndn_ind {
 
 class ndn_ind_dll SecurityException : public std::exception {
 public:

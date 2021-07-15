@@ -37,7 +37,7 @@
 
 #include "../interest.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A CommandInterestPreparer keeps track of a timestamp and prepares a command

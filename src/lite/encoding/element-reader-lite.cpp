@@ -21,7 +21,7 @@
 #include "../../c/encoding/element-reader.h"
 #include <ndn-ind/lite/encoding/element-reader-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 ElementReaderLite::ElementReaderLite
   (ElementListenerLite* elementListener, DynamicUInt8ArrayLite* buffer,

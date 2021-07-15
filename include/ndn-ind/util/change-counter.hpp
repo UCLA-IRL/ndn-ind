@@ -36,7 +36,7 @@
 
 #include "../common.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A ChangeCounter keeps a target object whose change count is tracked by a local

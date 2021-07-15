@@ -39,7 +39,7 @@
 #include "util/change-counter.hpp"
 
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An HmacWithSha256Signature extends Signature and holds the signature bits and

@@ -34,7 +34,7 @@
 #include "../c/control-parameters.h"
 #include <ndn-ind/lite/control-parameters-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 ControlParametersLite::ControlParametersLite
   (struct ndn_NameComponent *nameComponents, size_t maxNameComponents,

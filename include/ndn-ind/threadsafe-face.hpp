@@ -42,7 +42,7 @@
 #include <boost/move/unique_ptr.hpp>
 #include "face.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A ThreadsafeFace extends Face to use a Boost asio io_service to process events
@@ -98,7 +98,7 @@ public:
    * connection as follows. If the forwarder's Unix socket file exists, then
    * connect using AsyncUnixTransport. Otherwise, connect to "localhost" on port
    * 6363 using AsyncTcpTransport. This creates a default asio io_service. You
-   * can access it with getIoService(), which you should use to start the 
+   * can access it with getIoService(), which you should use to start the
    * service. With this constructor, you do not need to call processEvents since
    * the ioService does all processing.
    */

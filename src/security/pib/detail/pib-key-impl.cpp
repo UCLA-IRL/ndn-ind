@@ -40,7 +40,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 PibKeyImpl::PibKeyImpl
   (const Name& keyName, const uint8_t* keyEncoding, size_t keyEncodingLength,

@@ -42,7 +42,7 @@
 #include "helper-osx.hpp"
 #include "tpm-back-end.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * TpmBackEndOsx extends TpmBackEnd to implement a TPM back-end using the macOS

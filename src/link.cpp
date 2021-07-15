@@ -36,7 +36,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 Link::Link(const Data& data)
   : Data(data)

@@ -22,7 +22,7 @@
 #ifndef NDN_SECURITY_COMMON_HPP
 #define NDN_SECURITY_COMMON_HPP
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * The KeyIdType enum represents the type of a KeyId component in a key name.

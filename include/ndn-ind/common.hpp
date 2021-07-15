@@ -47,13 +47,13 @@
 // We always use ndn::ptr_lib.
 #if NDN_IND_HAVE_STD_SHARED_PTR && NDN_IND_WITH_STD_SHARED_PTR
 #include <memory>
-namespace ndn { namespace ptr_lib = std; }
+namespace ndn_ind { namespace ptr_lib = std; }
 #elif NDN_IND_HAVE_BOOST_SHARED_PTR && NDN_IND_WITH_BOOST_SHARED_PTR
 #include <boost/shared_ptr.hpp>
 #include <boost/weak_ptr.hpp>
 #include <boost/make_shared.hpp>
 #include <boost/enable_shared_from_this.hpp>
-namespace ndn { namespace ptr_lib = boost; }
+namespace ndn_ind { namespace ptr_lib = boost; }
 #else
 #error You cannot ./configure with both --with-std-shared-ptr=no and --with-boost-shared-ptr=no
 #endif
@@ -64,7 +64,7 @@ namespace ndn { namespace ptr_lib = boost; }
 #if NDN_IND_HAVE_STD_FUNCTION && NDN_IND_WITH_STD_FUNCTION
 #include <functional>
 // Define the func_lib namespace explicitly to pull in _1, _2, etc.
-namespace ndn { namespace func_lib {
+namespace ndn_ind { namespace func_lib {
   using std::function;
   using std::mem_fn;
   using std::bind;
@@ -87,12 +87,12 @@ namespace ndn { namespace func_lib {
 #elif NDN_IND_HAVE_BOOST_FUNCTION && NDN_IND_WITH_BOOST_FUNCTION
 #include <boost/function.hpp>
 #include <boost/bind.hpp>
-namespace ndn { namespace func_lib = boost; }
+namespace ndn_ind { namespace func_lib = boost; }
 #else
 #error You cannot ./configure with both --with-std-function=no and --with-boost-function=no
 #endif
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * Write the hex representation of the bytes in array to the result.

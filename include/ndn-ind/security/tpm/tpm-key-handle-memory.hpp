@@ -37,7 +37,7 @@
 
 #include "tpm-key-handle.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class TpmPrivateKey;
 

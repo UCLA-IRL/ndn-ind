@@ -48,7 +48,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 static const string INITIALIZATION = "\
 CREATE TABLE IF NOT EXISTS                         \n\

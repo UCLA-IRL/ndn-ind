@@ -42,7 +42,7 @@
 #include "util/change-counter.hpp"
 #include "lite/data-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class LpPacket;
 

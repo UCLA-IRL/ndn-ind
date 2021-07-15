@@ -44,7 +44,7 @@
 #include "exclude.hpp"
 #include "delegation-set.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class LpPacket;
 class Data;
@@ -85,7 +85,7 @@ public:
     mustBeFresh_(interest.mustBeFresh_),
     interestLifetime_(interest.interestLifetime_),
     nonce_(interest.nonce_), getNonceChangeCount_(0),
-    forwardingHint_(interest.forwardingHint_), 
+    forwardingHint_(interest.forwardingHint_),
     applicationParameters_(interest.applicationParameters_),
     linkWireEncoding_(interest.linkWireEncoding_),
     linkWireEncodingFormat_(interest.linkWireEncodingFormat_),

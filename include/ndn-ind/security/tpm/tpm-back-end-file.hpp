@@ -37,7 +37,7 @@
 
 #include "tpm-back-end.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class TpmPrivateKey;
 

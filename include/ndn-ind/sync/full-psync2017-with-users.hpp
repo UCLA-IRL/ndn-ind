@@ -38,7 +38,7 @@
 #include "full-psync2017.hpp"
 #include "psync-missing-data-info.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class PSyncUserPrefixes;
 
@@ -168,8 +168,8 @@ private:
     void
     initialize
       (size_t expectedNEntries, Face& face, const Name& syncPrefix,
-       const Name& userPrefix, KeyChain& keyChain, 
-       std::chrono::nanoseconds syncInterestLifetime, 
+       const Name& userPrefix, KeyChain& keyChain,
+       std::chrono::nanoseconds syncInterestLifetime,
        std::chrono::nanoseconds syncReplyFreshnessPeriod,
        const SigningInfo& signingInfo);
 

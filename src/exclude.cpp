@@ -37,7 +37,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 void
 Exclude::get(ExcludeLite& excludeLite) const

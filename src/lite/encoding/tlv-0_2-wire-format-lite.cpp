@@ -34,7 +34,7 @@
 #include "../../c/encoding/tlv-0_2-wire-format.h"
 #include <ndn-ind/lite/encoding/tlv-0_2-wire-format-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 ndn_Error
 Tlv0_2WireFormatLite::encodeInterest

@@ -42,7 +42,7 @@
 #include "encrypted-content.hpp"
 #include "encrypt-error.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * DecryptorV2 decrypts the supplied EncryptedContent element, using
@@ -148,7 +148,7 @@ public:
    * @param onError On failure, this calls onError(errorCode, message)
    * where errorCode is from EncryptError::ErrorCode, and message is an error
    * string.
-   * @param wireFormat (optional) A WireFormat object used to encode the Data 
+   * @param wireFormat (optional) A WireFormat object used to encode the Data
    * packet name to use as the "associated data". If omitted, use
    * WireFormat::getDefaultWireFormat().
    * NOTE: The library will log any exceptions thrown by this callback, but for
@@ -178,7 +178,7 @@ public:
 
   /**
    * Asynchronously decrypt the Interest's ApplicationParameters by decoding it
-   * as an EncryotedContent. When decrypting, use the encoding of the 
+   * as an EncryotedContent. When decrypting, use the encoding of the
    * Interest name (up to the ParametersSha256Digest component) as the
    * "associated data".
    * @param interest The Interest whose ApplicationParameters is decoded as an
@@ -192,7 +192,7 @@ public:
    * @param onError On failure, this calls onError(errorCode, message)
    * where errorCode is from EncryptError::ErrorCode, and message is an error
    * string.
-   * @param wireFormat (optional) A WireFormat object used to encode the 
+   * @param wireFormat (optional) A WireFormat object used to encode the
    * Interest name to use as the "associated data". If omitted, use
    * WireFormat::getDefaultWireFormat().
    * NOTE: The library will log any exceptions thrown by this callback, but for
@@ -298,7 +298,7 @@ private:
      * @param contentKey The ContentKey structure for storing the content key bits.
      * @param ckData The retrieved Data packet with the encrypted content key.
      * @param kdkKeyName This decrypts the ckData contents with the private key
-     * in the internalKeyChain_ with the name kdkKeyName. However, if kdkKeyName 
+     * in the internalKeyChain_ with the name kdkKeyName. However, if kdkKeyName
      * is empty, assume that ckData is a group content key and decrypt using the
      * private key in keyChain_ with the name credentialsKey_->getName() .
      * @param onError

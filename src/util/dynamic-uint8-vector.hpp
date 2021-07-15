@@ -40,7 +40,7 @@
 #include <ndn-ind/util/blob.hpp>
 #include "../c/util/dynamic-uint8-array.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A DynamicUInt8Vector extends ndn_DynamicUInt8Array to hold a shared_ptr<vector<uint8_t> > for use with

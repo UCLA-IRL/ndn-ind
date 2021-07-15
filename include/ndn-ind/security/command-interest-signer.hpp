@@ -38,7 +38,7 @@
 #include "key-chain.hpp"
 #include "command-interest-preparer.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * CommandInterestSigner is a helper class to create command interests. This

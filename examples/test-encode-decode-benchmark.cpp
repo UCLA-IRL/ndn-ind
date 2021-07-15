@@ -51,7 +51,7 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
+using namespace ndn_ind;
 
 static double
 getNowSeconds()
@@ -561,7 +561,7 @@ benchmarkEncodeDecodeDataCpp(bool useComplex, bool useCrypto, KeyType keyType)
     double duration = benchmarkEncodeDataSecondsCpp
       (nIterations, useComplex, useCrypto, keyType, encoding);
     cout << "Encode " << (useComplex ? "complex " : "simple  ") << format
-         << " data C++: Crypto? " 
+         << " data C++: Crypto? "
          << (useCrypto ? (keyType == KEY_TYPE_EC ? "EC " : "RSA") : "-  ")
          << ", Duration sec, Hz: " << duration << ", "
          << (nIterations / duration) << endl;

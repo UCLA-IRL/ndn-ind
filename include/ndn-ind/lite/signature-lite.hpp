@@ -38,7 +38,7 @@
 #include "security/validity-period-lite.hpp"
 #include "../c/data-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A SignatureLite holds a signature type, a KeyLocatorLite, the signature

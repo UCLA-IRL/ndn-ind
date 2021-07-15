@@ -39,7 +39,7 @@
 #include "../c/util/blob-types.h"
 #include "../lite/util/blob-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A Blob holds a pointer to an immutable byte array implemented as const std::vector<uint8_t>.
@@ -206,7 +206,7 @@ public:
   toHex(std::ostringstream& result) const
   {
     if (*this)
-      ndn::toHex(**this, result);
+      ndn_ind::toHex(**this, result);
   }
 
   /**
@@ -215,7 +215,7 @@ public:
    * null.
    */
   std::string
-  toHex() const { return (*this) ? ndn::toHex(**this) : std::string(); }
+  toHex() const { return (*this) ? ndn_ind::toHex(**this) : std::string(); }
 
   /**
    * Return the bytes of the byte array as a raw str of the same length. This

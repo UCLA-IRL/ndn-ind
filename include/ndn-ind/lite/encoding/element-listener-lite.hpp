@@ -35,7 +35,7 @@
 
 #include "../../c/encoding/element-reader-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 class ElementListenerLite;
 typedef void (*OnReceivedElementLite)

@@ -52,7 +52,7 @@
 
 struct ndn_Interest;
 
-namespace ndn {
+namespace ndn_ind {
 
 class KeyChain;
 
@@ -178,7 +178,7 @@ public:
      const ptr_lib::shared_ptr<const Name>& prefixCopy,
      const OnInterestCallback& onInterest,
      const OnRegisterFailed& onRegisterFailed,
-     const OnRegisterSuccess& onRegisterSuccess, 
+     const OnRegisterSuccess& onRegisterSuccess,
      const RegistrationOptions& registrationOptions,
      WireFormat& wireFormat, KeyChain& commandKeyChain,
      const Name& commandCertificateName, Face* face);
@@ -193,7 +193,7 @@ public:
      const ptr_lib::shared_ptr<const Name>& prefixCopy,
      const OnInterestCallback& onInterest,
      const OnRegisterFailed& onRegisterFailed,
-     const OnRegisterSuccess& onRegisterSuccess, 
+     const OnRegisterSuccess& onRegisterSuccess,
      const RegistrationOptions& registrationOptions,
      WireFormat& wireFormat, Face* face)
   {
@@ -498,7 +498,7 @@ private:
     (uint64_t registeredPrefixId, const ptr_lib::shared_ptr<const Name>& prefix,
      const OnInterestCallback& onInterest,
      const OnRegisterFailed& onRegisterFailed,
-     const OnRegisterSuccess& onRegisterSuccess, 
+     const OnRegisterSuccess& onRegisterSuccess,
      const RegistrationOptions& registrationOptions,
      KeyChain& commandKeyChain, const Name& commandCertificateName,
      WireFormat& wireFormat, Face* face);

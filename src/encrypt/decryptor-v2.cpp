@@ -40,11 +40,11 @@
 #include <ndn-ind/encrypt/decryptor-v2.hpp>
 
 using namespace std;
-using namespace ndn::func_lib;
+using namespace ndn_ind::func_lib;
 
 INIT_LOGGER("ndn.DecryptorV2");
 
-namespace ndn {
+namespace ndn_ind {
 
 void
 DecryptorV2::decrypt
@@ -93,10 +93,10 @@ DecryptorV2::Impl::shutdown()
       face_->removePendingInterest(contentKey.pendingInterest);
       contentKey.pendingInterest = 0;
 
-      for (size_t iPendingDecrypt = 0; 
+      for (size_t iPendingDecrypt = 0;
            iPendingDecrypt < contentKey.pendingDecrypts.size();
            ++iPendingDecrypt) {
-        ContentKey::PendingDecrypt& pendingDecrypt = 
+        ContentKey::PendingDecrypt& pendingDecrypt =
           *contentKey.pendingDecrypts[iPendingDecrypt];
         pendingDecrypt.onError
           (EncryptError::ErrorCode::CkRetrievalFailure,
@@ -601,7 +601,7 @@ DecryptorV2::Impl::decryptCkAndProcessPendingDecrypts
     ContentKey::PendingDecrypt& pendingDecrypt = *contentKey.pendingDecrypts[i];
     // TODO: If this calls onError, should we quit?
     doDecrypt
-      (*pendingDecrypt.encryptedContent, contentKey.bits, 
+      (*pendingDecrypt.encryptedContent, contentKey.bits,
        pendingDecrypt.associatedData, pendingDecrypt.onSuccess,
        pendingDecrypt.onError);
   }

@@ -38,7 +38,7 @@
 #include "../key-locator-lite.hpp"
 #include "../../c/encrypt/encrypted-content-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An EncryptedContentLite holds an encryption type, a payload and other fields

@@ -44,9 +44,9 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn::func_lib;
+using namespace ndn_ind::func_lib;
 
-namespace ndn {
+namespace ndn_ind {
 
 // Only compile the default Face constructor if we have Unix support.
 #if NDN_IND_HAVE_UNISTD_H
@@ -167,7 +167,7 @@ uint64_t
 Face::registerPrefix
   (const Name& prefix, const OnInterestCallback& onInterest,
    const OnRegisterFailed& onRegisterFailed,
-   const OnRegisterSuccess& onRegisterSuccess, 
+   const OnRegisterSuccess& onRegisterSuccess,
    const RegistrationOptions& registrationOptions,
    WireFormat& wireFormat)
 {

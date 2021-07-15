@@ -37,7 +37,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 PibCertificateContainer::PibCertificateContainer
   (const Name& keyName, const ptr_lib::shared_ptr<PibImpl>& pibImpl)

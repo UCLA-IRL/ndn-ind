@@ -41,7 +41,7 @@
 #include "../../data.hpp"
 #include "../../security/certificate/x509-certificate-info.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * CertificateV2 represents a certificate following the certificate format

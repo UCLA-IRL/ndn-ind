@@ -42,7 +42,7 @@
 #include <ndn-ind/ndn-ind-config.h>
 #if NDN_IND_HAVE_STD_REGEX
   #include <regex>
-  namespace ndn { namespace regex_lib = std; }
+  namespace ndn_ind { namespace regex_lib = std; }
   #define NDN_IND_HAVE_REGEX_LIB 1
 
   // Only Boost needs the correction.
@@ -50,7 +50,7 @@
 #elif defined(NDN_IND_HAVE_BOOST_REGEX)
   #include <boost/regex.hpp>
   #include <boost/version.hpp>
-  namespace ndn { namespace regex_lib = boost; }
+  namespace ndn_ind { namespace regex_lib = boost; }
   #define NDN_IND_HAVE_REGEX_LIB 1
 
   // Re: http://www.boost.org/users/history/version_1_56_0.html
@@ -73,7 +73,7 @@
 #include <string>
 #include <ndn-ind/name.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 class NdnRegexBackrefManager;
 

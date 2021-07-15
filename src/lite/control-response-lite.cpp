@@ -34,7 +34,7 @@
 #include "../c/control-response.h"
 #include <ndn-ind/lite/control-response-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 ControlResponseLite::ControlResponseLite
   (struct ndn_NameComponent *nameComponents, size_t maxNameComponents,

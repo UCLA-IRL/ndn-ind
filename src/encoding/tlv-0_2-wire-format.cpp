@@ -39,7 +39,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 static bool didCanBePrefixWarning_ = false;
 

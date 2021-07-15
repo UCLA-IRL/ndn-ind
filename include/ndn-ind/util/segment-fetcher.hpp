@@ -39,7 +39,7 @@
 #include "../face.hpp"
 #include "../security/key-chain.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * SegmentFetcher is a utility class to the fetch latest version of segmented data.

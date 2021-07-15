@@ -38,7 +38,7 @@
 
 #include "blob.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A SignedBlob extends Blob to keep the offsets of a signed portion (e.g., the bytes of Data packet).

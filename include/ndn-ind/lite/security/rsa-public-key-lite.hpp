@@ -39,7 +39,7 @@
 #include "../../c/encrypt/algo/encrypt-params-types.h"
 #include "../../c/security/rsa-public-key-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An RsaPublicKeyLite holds a decoded RSA public key for use in crypto

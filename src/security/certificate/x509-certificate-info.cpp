@@ -24,7 +24,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 typedef DerNode::DerSequence DerSequence;
 
@@ -350,7 +350,7 @@ X509CertificateInfo::findCrlDistributionUri(DerNode* extensions)
     extensions->getChildren();
 
   for (int iExtension = 0; iExtension < extensionsChildren.size(); ++iExtension) {
-    DerSequence* extension = 
+    DerSequence* extension =
       dynamic_cast<DerSequence*>(extensionsChildren[iExtension].get());
     if (!extension)
       // We don't expect this.

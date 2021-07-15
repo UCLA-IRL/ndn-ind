@@ -55,7 +55,7 @@
 #include <ndn-ind/lite/security/rsa-private-key-lite.hpp>
 #include <ndn-ind/lite/util/crypto-lite.hpp>
 
-using namespace ndn;
+using namespace ndn_ind;
 
 static uint8_t DEFAULT_RSA_PUBLIC_KEY_DER[] = {
   0x30, 0x82, 0x01, 0x22, 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01,
@@ -165,7 +165,7 @@ sendNfdRegisterPrefix
 ndn_Error
 signAndSendData
   (DataLite& data, const RsaPrivateKeyLite& privateKey,
-   const NameLite& certificateName, uint8_t* signatureBuffer, 
+   const NameLite& certificateName, uint8_t* signatureBuffer,
     TcpTransportLite& transport);
 
 /**
@@ -510,7 +510,7 @@ sendNfdRegisterPrefix
 ndn_Error
 signAndSendData
   (DataLite& data, const RsaPrivateKeyLite& privateKey,
-   const NameLite& certificateName, uint8_t* signatureBuffer, 
+   const NameLite& certificateName, uint8_t* signatureBuffer,
    TcpTransportLite& transport)
 {
   // Here we use a DynamicMallocUInt8ArrayLite. If your platform doesn't support

@@ -46,7 +46,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 Data::Data()
 : signature_(new Sha256WithRsaSignature()),

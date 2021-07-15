@@ -45,7 +45,7 @@ using namespace std;
 
 INIT_LOGGER("ndn.ConfigRule");
 
-namespace ndn {
+namespace ndn_ind {
 
 bool
 ConfigRule::match(bool isForInterest, const Name& packetName)

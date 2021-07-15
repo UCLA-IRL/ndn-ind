@@ -60,9 +60,9 @@ public:
    */
   int
   addFace
-    (const std::string& uri, 
-     const ndn::ptr_lib::shared_ptr<ndn::Transport>& transport,
-     const ndn::ptr_lib::shared_ptr<const ndn::Transport::ConnectionInfo>& connectionInfo);
+    (const std::string& uri,
+     const ndn_ind::ptr_lib::shared_ptr<ndn_ind::Transport>& transport,
+     const ndn_ind::ptr_lib::shared_ptr<const ndn_ind::Transport::ConnectionInfo>& connectionInfo);
 
   /**
    * Add a new face to communicate with TCP to host:port. This immediately
@@ -87,13 +87,13 @@ public:
    * faceId.
    */
   bool
-  addRoute(const ndn::Name& name, int faceId, int cost = 0);
+  addRoute(const ndn_ind::Name& name, int faceId, int cost = 0);
 
   /**
    * @deprecated Use addRoute.
    */
   bool
-  DEPRECATED_IN_NDN_IND registerRoute(const ndn::Name& name, int faceId, int cost = 0)
+  DEPRECATED_IN_NDN_IND registerRoute(const ndn_ind::Name& name, int faceId, int cost = 0)
   {
     return addRoute(name, faceId, cost);
   }
@@ -119,10 +119,10 @@ public:
    */
   void
   remoteRegisterPrefix
-    (int faceId, const ndn::Name& prefix, ndn::KeyChain& commandKeyChain,
-     const ndn::Name& commandCertificateName,
-     const ndn::OnRegisterFailed& onRegisterFailed,
-     const ndn::OnRegisterSuccess& onRegisterSuccess = ndn::OnRegisterSuccess());
+    (int faceId, const ndn_ind::Name& prefix, ndn_ind::KeyChain& commandKeyChain,
+     const ndn_ind::Name& commandCertificateName,
+     const ndn_ind::OnRegisterFailed& onRegisterFailed,
+     const ndn_ind::OnRegisterSuccess& onRegisterSuccess = ndn_ind::OnRegisterSuccess());
 
   /**
    * Call processEvents() for the Transport object in each face. This is
@@ -165,7 +165,7 @@ private:
    * A ForwarderFace is used by the faces list to represent a connection using
    * the* given Transport. (This is not to be confused with the application Face.)
    */
-  class ForwarderFace : public ndn::ElementListener {
+  class ForwarderFace : public ndn_ind::ElementListener {
   public:
     /**
      * Create a ForwarderFace and set the faceId to a unique value.
@@ -179,7 +179,7 @@ private:
      */
     ForwarderFace
       (MicroForwarder* parent, const std::string uri,
-       const ndn::ptr_lib::shared_ptr<ndn::Transport>& transport)
+       const ndn_ind::ptr_lib::shared_ptr<ndn_ind::Transport>& transport)
     : parent_(parent), uri_(uri), transport_(transport)
     {
       faceId_ = ++lastFaceId_;
@@ -188,7 +188,7 @@ private:
     const std::string&
     getUri() const { return uri_; }
 
-    ndn::Transport*
+    ndn_ind::Transport*
     getTransport() const { return transport_.get(); }
 
     int
@@ -235,7 +235,7 @@ private:
   private:
     MicroForwarder* parent_;
     std::string uri_;
-    ndn::ptr_lib::shared_ptr<ndn::Transport> transport_;
+    ndn_ind::ptr_lib::shared_ptr<ndn_ind::Transport> transport_;
     int faceId_;
     static int lastFaceId_;
   };
@@ -256,7 +256,7 @@ private:
      * @param entryEndTime The time when this entry should be removed.
      */
     PitEntry
-      (const ndn::ptr_lib::shared_ptr<ndn::Interest>& interest,
+      (const ndn_ind::ptr_lib::shared_ptr<ndn_ind::Interest>& interest,
        ForwarderFace* inFace,
        std::chrono::system_clock::time_point timeoutEndTime,
        std::chrono::system_clock::time_point entryEndTime)
@@ -266,7 +266,7 @@ private:
     {
     }
 
-    ndn::ptr_lib::shared_ptr<ndn::Interest>&
+    ndn_ind::ptr_lib::shared_ptr<ndn_ind::Interest>&
     getInterest() { return interest_; }
 
     ForwarderFace*
@@ -300,7 +300,7 @@ private:
     setIsRemoved() { isRemoved_ = true; }
 
   private:
-    ndn::ptr_lib::shared_ptr<ndn::Interest> interest_;
+    ndn_ind::ptr_lib::shared_ptr<ndn_ind::Interest> interest_;
     ForwarderFace* inFace_;
     // timeoutEndTime_ is based on the Interest lifetime.
     std::chrono::system_clock::time_point timeoutEndTime_;
@@ -350,12 +350,12 @@ private:
      * Create a FibEntry with the given registered name.
      * @param name The registered name for this FIB entry.
      */
-    FibEntry (const ndn::Name& name)
+    FibEntry (const ndn_ind::Name& name)
     : name_(name)
     {
     }
 
-    ndn::Name&
+    ndn_ind::Name&
     getName() { return name_; }
 
     /**
@@ -374,7 +374,7 @@ private:
     getNextHop(int i) { return *nextHops_[i]; }
 
     void
-    addNextHop(const ndn::ptr_lib::shared_ptr<NextHopRecord>& nextHop)
+    addNextHop(const ndn_ind::ptr_lib::shared_ptr<NextHopRecord>& nextHop)
     {
       nextHops_.push_back(nextHop);
     }
@@ -396,8 +396,8 @@ private:
     }
 
   private:
-    ndn::Name name_;
-    std::vector<ndn::ptr_lib::shared_ptr<NextHopRecord> > nextHops_;
+    ndn_ind::Name name_;
+    std::vector<ndn_ind::ptr_lib::shared_ptr<NextHopRecord> > nextHops_;
   };
 
   /**
@@ -406,7 +406,7 @@ private:
    */
   void
   onReceivedLocalhostInterest
-    (ForwarderFace* face, const ndn::ptr_lib::shared_ptr<ndn::Interest>& interest);
+    (ForwarderFace* face, const ndn_ind::ptr_lib::shared_ptr<ndn_ind::Interest>& interest);
 
   /**
    * Find the face in faces_ with the faceId.
@@ -427,15 +427,15 @@ private:
     PIT_.erase(PIT_.begin() + i);
   }
 
-  std::vector<ndn::ptr_lib::shared_ptr<PitEntry> > PIT_;
-  std::vector<ndn::ptr_lib::shared_ptr<FibEntry> > FIB_;
-  std::vector<ndn::ptr_lib::shared_ptr<ForwarderFace> > faces_;
+  std::vector<ndn_ind::ptr_lib::shared_ptr<PitEntry> > PIT_;
+  std::vector<ndn_ind::ptr_lib::shared_ptr<FibEntry> > FIB_;
+  std::vector<ndn_ind::ptr_lib::shared_ptr<ForwarderFace> > faces_;
   std::chrono::nanoseconds minPitEntryLifetime_;
 
-  ndn::Name localhostNamePrefix;
-  ndn::Name localhopNamePrefix;
-  ndn::Name registerNamePrefix;
-  ndn::Name broadcastNamePrefix;
+  ndn_ind::Name localhostNamePrefix;
+  ndn_ind::Name localhopNamePrefix;
+  ndn_ind::Name registerNamePrefix;
+  ndn_ind::Name broadcastNamePrefix;
 
   static MicroForwarder* instance_;
 };

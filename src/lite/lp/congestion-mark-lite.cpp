@@ -35,7 +35,7 @@
 #include <ndn-ind/lite/lp/lp-packet-lite.hpp>
 #include <ndn-ind/lite/lp/congestion-mark-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 CongestionMarkLite::CongestionMarkLite()
 {

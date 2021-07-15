@@ -68,7 +68,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 InvertibleBloomLookupTable::InvertibleBloomLookupTable(size_t expectedNEntries)
 {

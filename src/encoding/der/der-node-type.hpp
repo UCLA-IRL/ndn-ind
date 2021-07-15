@@ -24,7 +24,7 @@
 #ifndef NDN_DER_NODE_TYPE_HPP
 #define NDN_DER_NODE_TYPE_HPP
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * The DerNodeType enum defines the known DER node types.

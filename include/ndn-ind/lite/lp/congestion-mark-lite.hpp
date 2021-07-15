@@ -36,7 +36,7 @@
 
 #include "../../c/lp/congestion-mark-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 class LpPacketLite;
 

@@ -47,7 +47,7 @@ using namespace std;
 
 using boost::asio::ip::tcp;
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * AsyncTcpTransport::SocketTransport simply extends

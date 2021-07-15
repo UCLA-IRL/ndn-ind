@@ -39,7 +39,7 @@
 #include "certificate/public-key.hpp"
 #include "v2/certificate-v2.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * The VerificationHelpers class has static methods to verify signatures and

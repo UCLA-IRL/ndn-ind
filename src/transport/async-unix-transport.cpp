@@ -47,7 +47,7 @@ using namespace std;
 
 using boost::asio::local::stream_protocol;
 
-namespace ndn {
+namespace ndn_ind {
 
 AsyncUnixTransport::ConnectionInfo::~ConnectionInfo()
 {

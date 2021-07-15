@@ -38,7 +38,7 @@
 #include <ndn-ind/lite/lp/congestion-mark-lite.hpp>
 #include <ndn-ind/lp-packet-header-field.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 class LpPacket;
 

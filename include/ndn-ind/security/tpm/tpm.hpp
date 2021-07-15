@@ -40,7 +40,7 @@
 #include "../../name.hpp"
 #include "../key-params.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class TpmKeyHandle;
 class TpmBackEnd;

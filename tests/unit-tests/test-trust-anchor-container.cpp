@@ -46,7 +46,7 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
+using namespace ndn_ind;
 
 static bool
 fileExists(const string& filePath)
@@ -208,7 +208,7 @@ TEST_F(TestTrustAnchorContainer, FindByInterest)
 
   ptr_lib::shared_ptr<CertificateV2> certificate3 =
     fixture.addCertificate(identity1->getDefaultKey(), "3");
-  ptr_lib::shared_ptr<CertificateV2> certificate4 = 
+  ptr_lib::shared_ptr<CertificateV2> certificate4 =
     fixture.addCertificate(identity1->getDefaultKey(), "4");
   ptr_lib::shared_ptr<CertificateV2> certificate5 =
     fixture.addCertificate(identity1->getDefaultKey(), "5");

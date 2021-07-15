@@ -36,7 +36,7 @@
 
 #include <ndn-ind/c/encoding/element-reader-types.h>
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An ElementListener extends an ndn_ElementListener struct to proved an abstract virtual onReceivedElement function which wraps

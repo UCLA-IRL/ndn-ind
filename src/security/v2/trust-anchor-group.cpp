@@ -50,7 +50,7 @@ INIT_LOGGER("ndn.TrustAnchorGroup");
 using namespace std;
 using namespace std::chrono;
 
-namespace ndn {
+namespace ndn_ind {
 
 CertificateContainerInterface::~CertificateContainerInterface()
 {

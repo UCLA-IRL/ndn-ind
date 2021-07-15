@@ -43,7 +43,7 @@
 #include "fib-entry.pb.h"
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 int main(int argc, char** argv)
 {

@@ -46,11 +46,11 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn::func_lib;
+using namespace ndn_ind::func_lib;
 
 INIT_LOGGER("ndn.EncryptorV2");
 
-namespace ndn {
+namespace ndn_ind {
 
 ndn_ind_dll const std::chrono::nanoseconds RETRY_DELAY_AFTER_NACK = std::chrono::seconds(1);
 ndn_ind_dll const std::chrono::nanoseconds RETRY_DELAY_KEK_RETRIEVAL = std::chrono::minutes(1);
@@ -928,7 +928,7 @@ EncryptorV2::Impl::KeyManager::decryptGckAndProcessPendingEncrypts(
   }
   if (decryptedCkBits.isNull()) {
     isGckRetrievalInProgress_ = false;
-    _LOG_ERROR("Could not decrypt secret, " << 
+    _LOG_ERROR("Could not decrypt secret, " <<
       parent_->credentialsKey_->getName().toUri() << " not found in TPM");
     return;
   }

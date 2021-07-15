@@ -39,8 +39,8 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 class TestValidator : public ::testing::Test {
 public:
@@ -105,8 +105,8 @@ public:
 
   void
   processInterestAsInfiniteCertificateChain
-    (const ndn::Interest& interest, const ndn::OnData& onData,
-     const ndn::OnTimeout& onTimeout, const ndn::OnNetworkNack& onNetworkNack)
+    (const ndn_ind::Interest& interest, const ndn_ind::OnData& onData,
+     const ndn_ind::OnTimeout& onTimeout, const ndn_ind::OnNetworkNack& onNetworkNack)
   {
     // Create another key for the same identity and sign it properly.
     ptr_lib::shared_ptr<PibKey> parentKey =
@@ -192,8 +192,8 @@ TEST_F(TestValidator, Timeouts)
 
 static void
 processInterestAsNetworkNack
-  (const ndn::Interest& interest, const ndn::OnData& onData,
-   const ndn::OnTimeout& onTimeout, const ndn::OnNetworkNack& onNetworkNack)
+  (const ndn_ind::Interest& interest, const ndn_ind::OnData& onData,
+   const ndn_ind::OnTimeout& onTimeout, const ndn_ind::OnNetworkNack& onNetworkNack)
 {
   NetworkNackLite networkNackLite;
   networkNackLite.setReason(ndn_NetworkNackReason_NO_ROUTE);
@@ -217,8 +217,8 @@ TEST_F(TestValidator, NackedInterests)
 
 static void
 processInterestWithCertificate
-  (const ndn::Interest& interest, const ndn::OnData& onData,
-   const ndn::OnTimeout& onTimeout, const ndn::OnNetworkNack& onNetworkNack,
+  (const ndn_ind::Interest& interest, const ndn_ind::OnData& onData,
+   const ndn_ind::OnTimeout& onTimeout, const ndn_ind::OnNetworkNack& onNetworkNack,
    const ValidatorFixture::TestFace::ProcessInterest originalProcessInterest,
    const ptr_lib::shared_ptr<Data>& certificate)
 {

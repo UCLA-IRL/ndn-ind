@@ -26,7 +26,7 @@
 #include <exception>
 #include <string>
 
-namespace ndn {
+namespace ndn_ind {
 
 class DerException : public std::exception {
 public:

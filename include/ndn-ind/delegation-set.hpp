@@ -37,7 +37,7 @@
 #include "name.hpp"
 #include "lite/delegation-set-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A DelegationSet holds a list of DelegationSet::Delegation entries which is

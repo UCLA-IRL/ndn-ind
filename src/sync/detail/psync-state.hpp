@@ -37,7 +37,7 @@
 
 #include <ndn-ind/name.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 class TlvEncoder;
 

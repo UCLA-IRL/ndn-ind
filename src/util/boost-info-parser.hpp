@@ -41,7 +41,7 @@
 #include <utility>
 #include <ndn-ind/common.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * BoostInfoTree is provided for compatibility with the Boost INFO property list

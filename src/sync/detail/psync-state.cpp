@@ -28,7 +28,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 Blob
 PSyncState::wireEncode() const

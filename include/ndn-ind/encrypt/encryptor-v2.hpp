@@ -47,7 +47,7 @@
 class TestEncryptorV2_EncryptAndPublishCk_Test;
 class TestEncryptorV2_EnumerateDataFromInMemoryStorage_Test;
 
-namespace ndn {
+namespace ndn_ind {
 
 ndn_ind_dll extern const std::chrono::nanoseconds RETRY_DELAY_AFTER_NACK;
 ndn_ind_dll extern const std::chrono::nanoseconds RETRY_DELAY_KEK_RETRIEVAL;
@@ -103,7 +103,7 @@ public:
      Validator* validator, KeyChain* keyChain, Face* face,
      ndn_EncryptAlgorithmType algorithmType = ndn_EncryptAlgorithmType_AesCbc)
   : impl_(new Impl
-          (accessPrefix, ckPrefix, ckDataSigningInfo, onError, validator, 
+          (accessPrefix, ckPrefix, ckDataSigningInfo, onError, validator,
            keyChain, face, algorithmType))
   {
     impl_->initializeCk();
@@ -246,7 +246,7 @@ public:
    * associatedData.size() is 0, then this can be an isNull() Blob. If the
    * associatedData size() is 0, then no associated data is used.
    * @param onSuccess On successful encryption, this calls
-   * onSuccess(encryptedContent) where encryptedContent is the new 
+   * onSuccess(encryptedContent) where encryptedContent is the new
    * EncryptedContent.
    * NOTE: The library will log any exceptions thrown by this callback, but for
    * better error handling the callback should catch and properly handle any
@@ -488,7 +488,7 @@ private:
   class Impl : public ptr_lib::enable_shared_from_this<Impl> {
   public:
     /**
-     * Create a new Impl, which should belong to a shared_ptr. Then you must 
+     * Create a new Impl, which should belong to a shared_ptr. Then you must
      * call initialize(). See the EncryptorV2 constructor for parameter
      * documentation.
      */

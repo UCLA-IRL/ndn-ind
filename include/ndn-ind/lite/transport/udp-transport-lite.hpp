@@ -39,7 +39,7 @@
 #include "../util/dynamic-uint8-array-lite.hpp"
 #include "../encoding/element-listener-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A UdpTransportLite object is used to send packets and to listen for incoming

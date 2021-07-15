@@ -43,7 +43,7 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
+using namespace ndn_ind;
 
 class TestKeyChain : public ::testing::Test {
 public:
@@ -103,7 +103,7 @@ TEST_F(TestKeyChain, Management)
 
   // Delete the certificate.
   ASSERT_EQ(1, key3->getCertificates().size());
-  ptr_lib::shared_ptr<CertificateV2> key3Cert1 = 
+  ptr_lib::shared_ptr<CertificateV2> key3Cert1 =
     key3->getCertificates().certificates_.begin()->second;
   Name key3CertName = key3Cert1->getName();
   fixture_.keyChain_.deleteCertificate(*key3, key3CertName);

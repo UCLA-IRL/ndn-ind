@@ -37,7 +37,7 @@
 #include "../c/common.h"
 #include "../c/registration-options-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A RegistrationOptionsLite holds the options used when registering with the

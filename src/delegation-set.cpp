@@ -36,7 +36,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 DelegationSet::Delegation::Delegation
   (const DelegationSetLite::Delegation& delegationLite)

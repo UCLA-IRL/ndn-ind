@@ -27,7 +27,7 @@
 #include "../../util/blob.hpp"
 #include "../../encoding/oid.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class DerNode;
 

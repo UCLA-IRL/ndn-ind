@@ -35,7 +35,7 @@
 #include <ndn-ind/security/security-exception.hpp>
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 SecurityException::SecurityException(const string& errorMessage) throw()
 : errorMessage_(errorMessage)

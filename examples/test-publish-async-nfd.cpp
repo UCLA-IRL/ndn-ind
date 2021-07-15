@@ -39,7 +39,7 @@
 #include <ndn-ind/security/key-chain.hpp>
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 class Echo {
 public:

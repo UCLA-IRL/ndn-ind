@@ -38,7 +38,7 @@
 #include "security/validity-period.hpp"
 #include "util/change-counter.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A DigestSha256Signature extends Signature and holds the signature bits (which

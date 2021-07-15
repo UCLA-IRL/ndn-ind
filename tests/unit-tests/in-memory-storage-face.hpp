@@ -46,36 +46,36 @@
  * local DelayedCallTable (to use for callLater) so that you can call its
  * setNowOffset_ for testing.
  */
-class InMemoryStorageFace : public ndn::Face
+class InMemoryStorageFace : public ndn_ind::Face
 {
 public:
-  InMemoryStorageFace(ndn::InMemoryStorageRetaining* storage)
+  InMemoryStorageFace(ndn_ind::InMemoryStorageRetaining* storage)
   : Face("localhost"), storage_(storage)
   {
   }
 
   virtual uint64_t
   expressInterest
-    (const ndn::Interest& interest, const ndn::OnData& onData,
-     const ndn::OnTimeout& onTimeout, const ndn::OnNetworkNack& onNetworkNack,
-     ndn::WireFormat& wireFormat = *ndn::WireFormat::getDefaultWireFormat());
+    (const ndn_ind::Interest& interest, const ndn_ind::OnData& onData,
+     const ndn_ind::OnTimeout& onTimeout, const ndn_ind::OnNetworkNack& onNetworkNack,
+     ndn_ind::WireFormat& wireFormat = *ndn_ind::WireFormat::getDefaultWireFormat());
 
   virtual uint64_t
   registerPrefix
-    (const ndn::Name& prefix, const ndn::OnInterestCallback& onInterest,
-     const ndn::OnRegisterFailed& onRegisterFailed,
-     const ndn::OnRegisterSuccess& onRegisterSuccess,
-     const ndn::RegistrationOptions& registrationOptions = ndn::RegistrationOptions(),
-     ndn::WireFormat& wireFormat = *ndn::WireFormat::getDefaultWireFormat());
+    (const ndn_ind::Name& prefix, const ndn_ind::OnInterestCallback& onInterest,
+     const ndn_ind::OnRegisterFailed& onRegisterFailed,
+     const ndn_ind::OnRegisterSuccess& onRegisterSuccess,
+     const ndn_ind::RegistrationOptions& registrationOptions = ndn_ind::RegistrationOptions(),
+     ndn_ind::WireFormat& wireFormat = *ndn_ind::WireFormat::getDefaultWireFormat());
 
   virtual void
   putData
-    (const ndn::Data& data,
-     ndn::WireFormat& wireFormat = *ndn::WireFormat::getDefaultWireFormat());
+    (const ndn_ind::Data& data,
+     ndn_ind::WireFormat& wireFormat = *ndn_ind::WireFormat::getDefaultWireFormat());
 
   virtual void
   callLater
-    (std::chrono::nanoseconds delay, const ndn::Face::Callback& callback);
+    (std::chrono::nanoseconds delay, const ndn_ind::Face::Callback& callback);
 
   virtual void
   processEvents();
@@ -87,16 +87,16 @@ public:
    * OnInterest callback.
    */
   void
-  receive(const ndn::ptr_lib::shared_ptr<ndn::Interest> interest);
+  receive(const ndn_ind::ptr_lib::shared_ptr<ndn_ind::Interest> interest);
 
-  std::vector<ndn::ptr_lib::shared_ptr<ndn::Interest> > sentInterests_;
-  std::vector<ndn::ptr_lib::shared_ptr<ndn::Data> > sentData_;
+  std::vector<ndn_ind::ptr_lib::shared_ptr<ndn_ind::Interest> > sentInterests_;
+  std::vector<ndn_ind::ptr_lib::shared_ptr<ndn_ind::Data> > sentData_;
   // Use delayedCallTable_ here so that we can call setNowOffset_().
-  ndn::DelayedCallTable delayedCallTable_;
+  ndn_ind::DelayedCallTable delayedCallTable_;
 
 private:
-  ndn::InterestFilterTable interestFilterTable_;
-  ndn::InMemoryStorageRetaining* storage_;
+  ndn_ind::InterestFilterTable interestFilterTable_;
+  ndn_ind::InMemoryStorageRetaining* storage_;
 };
 
 #endif

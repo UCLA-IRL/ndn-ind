@@ -43,7 +43,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 NdnRegexTopMatcher::NdnRegexTopMatcher(const string& expr, const string& expand)
 : NdnRegexMatcherBase(expr, NDN_REGEX_EXPR_TOP), expand_(expand),

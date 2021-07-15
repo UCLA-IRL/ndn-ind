@@ -34,7 +34,7 @@
 #include "../c/name.h"
 #include <ndn-ind/lite/name-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 NameLite::Component::Component()
 {

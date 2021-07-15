@@ -53,11 +53,11 @@ public:
     INTEREST_TIMEOUT = 2
   };
 
-  typedef ndn::func_lib::function<void
+  typedef ndn_ind::func_lib::function<void
     (ChannelDiscovery& channelDiscovery,
-     const ndn::ptr_lib::shared_ptr<ndn::Name>& userPrefix)> OnReceivedChannelList;
+     const ndn_ind::ptr_lib::shared_ptr<ndn_ind::Name>& userPrefix)> OnReceivedChannelList;
 
-  typedef ndn::func_lib::function<void
+  typedef ndn_ind::func_lib::function<void
     (ErrorCode errorCode, const std::string& message)> OnError;
 
   /**
@@ -78,7 +78,7 @@ public:
    * calls keyChain.sign(data, certificateName).
    * @param certificateName The certificate name of the key to use for signing a
    * data packet containing a sync state message.
-   * @param syncLifetime The interest lifetime for sending sync interests, for 
+   * @param syncLifetime The interest lifetime for sending sync interests, for
    * example std::chrono::seconds(5).
    * @param onReceivedChannelList On receiving a channel list from another user,
    * this calls onReceivedChannelList(channelDiscovery, userPrefix) where
@@ -95,10 +95,10 @@ public:
    * exceptions.
    */
   ChannelDiscovery
-    (const ndn::Name& applicationDataPrefix,
+    (const ndn_ind::Name& applicationDataPrefix,
      const std::string& channelListFilePath,
-     const ndn::Name& applicationBroadcastPrefix, ndn::Face& face,
-     ndn::KeyChain& keyChain, const ndn::Name& certificateName,
+     const ndn_ind::Name& applicationBroadcastPrefix, ndn_ind::Face& face,
+     ndn_ind::KeyChain& keyChain, const ndn_ind::Name& certificateName,
      std::chrono::nanoseconds syncLifetime,
      const OnReceivedChannelList& onReceivedChannelList, const OnError& onError)
   : impl_(new Impl
@@ -135,7 +135,7 @@ public:
    * Get the applicationDataPrefix given to the constructor.
    * @return The applicationDataPrefix. You should not change this object.
    */
-  const ndn::Name&
+  const ndn_ind::Name&
   getApplicationDataPrefix() { return impl_->getApplicationDataPrefix(); }
 
   /**
@@ -144,7 +144,7 @@ public:
    * @return An unsorted copy of the list of user prefix Names. This does not
    * contain this user's getApplicationDataPrefix().
    */
-  ndn::ptr_lib::shared_ptr<std::vector<ndn::Name>>
+  ndn_ind::ptr_lib::shared_ptr<std::vector<ndn_ind::Name>>
   getOtherUserPrefixes()
   {
     return impl_->getOtherUserPrefixes();
@@ -157,8 +157,8 @@ public:
    * @return A sorted copy of the user's channel list, or null if the userPrefix
    * does not exist.
    */
-  ndn::ptr_lib::shared_ptr<std::vector<std::string>>
-  getChannelList(const ndn::Name& userPrefix)
+  ndn_ind::ptr_lib::shared_ptr<std::vector<std::string>>
+  getChannelList(const ndn_ind::Name& userPrefix)
   {
     return impl_->getChannelList(userPrefix);
   }
@@ -171,7 +171,7 @@ private:
    * class so that ChannelDiscovery can create an instance in a shared_ptr to
    * use in callbacks.
    */
-  class Impl : public ndn::ptr_lib::enable_shared_from_this<Impl> {
+  class Impl : public ndn_ind::ptr_lib::enable_shared_from_this<Impl> {
   public:
     /**
      * Create a new Impl, which should belong to a shared_ptr. Then you must
@@ -179,9 +179,9 @@ private:
      * documentation.
      */
     Impl
-      (ChannelDiscovery& parent, const ndn::Name& applicationDataPrefix,
-       const std::string& channelListFilePath, ndn::Face& face,
-       ndn::KeyChain& keyChain, const ndn::Name& certificateName,
+      (ChannelDiscovery& parent, const ndn_ind::Name& applicationDataPrefix,
+       const std::string& channelListFilePath, ndn_ind::Face& face,
+       ndn_ind::KeyChain& keyChain, const ndn_ind::Name& certificateName,
        std::chrono::nanoseconds syncLifetime,
        const OnReceivedChannelList& onReceivedChannelList, const OnError& onError);
 
@@ -192,7 +192,7 @@ private:
      * @param applicationBroadcastPrefix From the ChannelDiscovery constructor.
      */
     void
-    initialize(const ndn::Name& applicationBroadcastPrefix);
+    initialize(const ndn_ind::Name& applicationBroadcastPrefix);
 
     void
     addChannel(const std::string& channel);
@@ -200,14 +200,14 @@ private:
     void
     removeChannel(const std::string& channel);
 
-    const ndn::Name&
+    const ndn_ind::Name&
     getApplicationDataPrefix() { return applicationDataPrefix_; }
 
-    ndn::ptr_lib::shared_ptr<std::vector<ndn::Name>>
+    ndn_ind::ptr_lib::shared_ptr<std::vector<ndn_ind::Name>>
     getOtherUserPrefixes();
 
-    ndn::ptr_lib::shared_ptr<std::vector<std::string>>
-    getChannelList(const ndn::Name& userPrefix);
+    ndn_ind::ptr_lib::shared_ptr<std::vector<std::string>>
+    getChannelList(const ndn_ind::Name& userPrefix);
 
     /**
      * This is called on success after initialize registers the
@@ -219,8 +219,8 @@ private:
      */
     void
     onRegisterApplicationPrefixSuccess
-      (const ndn::ptr_lib::shared_ptr<const ndn::Name>& prefix,
-       uint64_t registeredPrefixId, const ndn::Name& applicationBroadcastPrefix,
+      (const ndn_ind::ptr_lib::shared_ptr<const ndn_ind::Name>& prefix,
+       uint64_t registeredPrefixId, const ndn_ind::Name& applicationBroadcastPrefix,
        int previousSequenceNumber);
 
     /**
@@ -234,7 +234,7 @@ private:
      */
     void
     onReceivedSyncState
-      (const std::vector<ndn::ChronoSync2013::SyncState>& syncStates,
+      (const std::vector<ndn_ind::ChronoSync2013::SyncState>& syncStates,
        bool isRecovery);
 
     /**
@@ -242,17 +242,17 @@ private:
      */
     void
     onData
-      (const ndn::ptr_lib::shared_ptr<const ndn::Interest>& interest,
-       const ndn::ptr_lib::shared_ptr<ndn::Data>& data);
+      (const ndn_ind::ptr_lib::shared_ptr<const ndn_ind::Interest>& interest,
+       const ndn_ind::ptr_lib::shared_ptr<ndn_ind::Data>& data);
 
     /** This is called when receiving an Interest for applicationDataPrefix_,
      */
     void
     onApplicationInterest
-      (const ndn::ptr_lib::shared_ptr<const ndn::Name>& prefix,
-       const ndn::ptr_lib::shared_ptr<const ndn::Interest>& interest,
-       ndn::Face& face, uint64_t interestFilterId,
-       const ndn::ptr_lib::shared_ptr<const ndn::InterestFilter>& filter);
+      (const ndn_ind::ptr_lib::shared_ptr<const ndn_ind::Name>& prefix,
+       const ndn_ind::ptr_lib::shared_ptr<const ndn_ind::Interest>& interest,
+       ndn_ind::Face& face, uint64_t interestFilterId,
+       const ndn_ind::ptr_lib::shared_ptr<const ndn_ind::InterestFilter>& filter);
 
     /**
      * This is called when the ChronoSync2013 constructor fails to register the
@@ -260,7 +260,7 @@ private:
      * @param prefix The Name prefix from registerPrefix.
      */
     void
-    onRegisterFailed(const ndn::ptr_lib::shared_ptr<const ndn::Name>& prefix);
+    onRegisterFailed(const ndn_ind::ptr_lib::shared_ptr<const ndn_ind::Name>& prefix);
 
     /**
      * This is called when an expressed interest for another user's channel list
@@ -268,7 +268,7 @@ private:
      * @param interest The Interest given to expressInterest.
      */
     void
-    onTimeout(const ndn::ptr_lib::shared_ptr<const ndn::Interest>& interest);
+    onTimeout(const ndn_ind::ptr_lib::shared_ptr<const ndn_ind::Interest>& interest);
 
     /**
      * Use ChronoSync publishNextSequenceNo to get the next sequence number, use
@@ -285,7 +285,7 @@ private:
      * @param sequenceNo The sequence number for the Data name.
      * @return The new Data packet.
      */
-    ndn::ptr_lib::shared_ptr<ndn::Data>
+    ndn_ind::ptr_lib::shared_ptr<ndn_ind::Data>
     makeChannelListData(int sequenceNo);
 
     /**
@@ -297,14 +297,14 @@ private:
      */
     static void
     parseChannelList
-      (const ndn::Blob& blob, std::vector<std::string>& channelList);
+      (const ndn_ind::Blob& blob, std::vector<std::string>& channelList);
 
     /**
      * Read the filePath, decode as base64 and return the Blob.
      * @param filePath The file path to read.
      * @return The decoded Blob. If the file does not exist, the Blob isNull.
      */
-    static ndn::Blob
+    static ndn_ind::Blob
     readBase64Blob(const std::string& filePath);
 
     /**
@@ -313,30 +313,30 @@ private:
      * @param filePath The file path to write to.
      */
     static void
-    writeBase64Blob(const ndn::Blob& blob, const std::string& filePath);
+    writeBase64Blob(const ndn_ind::Blob& blob, const std::string& filePath);
 
   private:
     ChannelDiscovery& parent_;
-    ndn::Name applicationDataPrefix_;
+    ndn_ind::Name applicationDataPrefix_;
     int sessionNo_;
     std::string channelListFilePath_;
-    ndn::Face& face_;
-    ndn::KeyChain& keyChain_;
-    ndn::Name certificateName_;
+    ndn_ind::Face& face_;
+    ndn_ind::KeyChain& keyChain_;
+    ndn_ind::Name certificateName_;
     std::chrono::nanoseconds syncLifetime_;
     OnReceivedChannelList onReceivedChannelList_;
     OnError onError_;
-    ndn::ptr_lib::shared_ptr<ndn::ChronoSync2013> sync_;
+    ndn_ind::ptr_lib::shared_ptr<ndn_ind::ChronoSync2013> sync_;
     std::vector<std::string> myChannelList_;
     // The key is the user's application prefix. The value is the list of channel names.
     std::map<std::string, std::vector<std::string>> otherUserChannelList_;
-    ndn::ptr_lib::shared_ptr<ndn::Data> channelListData_;
+    ndn_ind::ptr_lib::shared_ptr<ndn_ind::Data> channelListData_;
     bool enabled_;
     bool isInitialized_;
     bool needToPublish_;
   };
 
-  ndn::ptr_lib::shared_ptr<Impl> impl_;
+  ndn_ind::ptr_lib::shared_ptr<Impl> impl_;
 };
 
 }

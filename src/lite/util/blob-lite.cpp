@@ -34,7 +34,7 @@
 #include "../../c/util/blob.h"
 #include <ndn-ind/lite/util/blob-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 BlobLite::BlobLite()
 {

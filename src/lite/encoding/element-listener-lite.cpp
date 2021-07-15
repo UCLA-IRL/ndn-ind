@@ -34,7 +34,7 @@
 #include "../../c/encoding/element-listener.h"
 #include <ndn-ind/lite/encoding/element-listener-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 ElementListenerLite::ElementListenerLite(OnReceivedElementLite onReceivedElement)
 {

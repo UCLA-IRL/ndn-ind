@@ -41,7 +41,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 NdnRegexMatcherBase::Error::Error(const string& errorMessage) throw()
 : errorMessage_(errorMessage)

@@ -8,7 +8,7 @@
  * Original file: src/common.cpp
  * Original repository: https://github.com/named-data/ndn-cpp
  *
- * Summary of Changes: Use ndn-ind includes. Add support functions for std::chrono. 
+ * Summary of Changes: Use ndn-ind includes. Add support functions for std::chrono.
  *
  * which was originally released under the LGPL license with the following rights:
  *
@@ -40,7 +40,7 @@
 using namespace std;
 using namespace std::chrono;
 
-namespace ndn {
+namespace ndn_ind {
 
 void
 toHex(const uint8_t* array, size_t arrayLength, std::ostringstream& result)
@@ -125,7 +125,7 @@ toIsoString
   char isoString[25];
   ndn_Error error;
   if ((error = ndn_toIsoString
-       (ndn::toMillisecondsSince1970(time), includeFraction ? 1 : 0, isoString)))
+       (ndn_ind::toMillisecondsSince1970(time), includeFraction ? 1 : 0, isoString)))
     throw runtime_error(ndn_getErrorString(error));
 
   return isoString;

@@ -43,7 +43,7 @@
 #include "certificate-extension.hpp"
 #include "public-key.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 typedef std::vector<CertificateSubjectDescription> SubjectDescriptionList;
 typedef std::vector<CertificateExtension> ExtensionList;

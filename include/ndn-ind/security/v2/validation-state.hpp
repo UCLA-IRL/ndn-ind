@@ -39,7 +39,7 @@
 #include "certificate-v2.hpp"
 #include "../../interest.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A DataValidationSuccessCallback function object is used to report a

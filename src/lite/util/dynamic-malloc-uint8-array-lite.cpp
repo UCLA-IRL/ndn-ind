@@ -34,7 +34,7 @@
 #include <stdlib.h>
 #include <ndn-ind/lite/util/dynamic-malloc-uint8-array-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 DynamicMallocUInt8ArrayLite::DynamicMallocUInt8ArrayLite(size_t initialLength)
 : DynamicUInt8ArrayLite(0, 0, &DynamicMallocUInt8ArrayLite::realloc)

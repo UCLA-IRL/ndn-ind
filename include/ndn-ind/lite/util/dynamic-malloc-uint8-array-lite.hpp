@@ -36,7 +36,7 @@
 
 #include "dynamic-uint8-array-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A DynamicMallocUInt8ArrayLite extends DynamicUInt8ArrayLite to use malloc and

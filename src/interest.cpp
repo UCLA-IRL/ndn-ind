@@ -44,7 +44,7 @@ INIT_LOGGER("ndn.Interest");
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 Interest& Interest::operator=(const Interest& interest)
 {

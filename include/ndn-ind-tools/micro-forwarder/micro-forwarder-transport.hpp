@@ -33,7 +33,7 @@ namespace ndntools {
  * A MicroForwarderTransport extends Transport to communicate with a
  * MicroForwarder object. This can be used as the transport in the Face constructor.
  */
-class ndn_ind_dll MicroForwarderTransport : public ndn::Transport {
+class ndn_ind_dll MicroForwarderTransport : public ndn_ind::Transport {
 public:
   /**
    * A MicroForwarderTransport::ConnectionInfo extends Transport::ConnectionInfo
@@ -77,7 +77,7 @@ public:
    * @return True because MicroForwarder transports are always local.
    */
   virtual bool
-  isLocal(const ndn::Transport::ConnectionInfo& connectionInfo);
+  isLocal(const ndn_ind::Transport::ConnectionInfo& connectionInfo);
 
   /**
    * Override to return false since connect does not need to use the onConnected
@@ -99,8 +99,8 @@ public:
    */
   virtual void
   connect
-    (const ndn::Transport::ConnectionInfo& connectionInfo,
-     ndn::ElementListener& elementListener, const OnConnected& onConnected);
+    (const ndn_ind::Transport::ConnectionInfo& connectionInfo,
+     ndn_ind::ElementListener& elementListener, const OnConnected& onConnected);
 
   /**
    * Send data to the MicroForwarder indicated by the ConnectionInfo.
@@ -128,7 +128,7 @@ private:
    * Transport used in calling the MicroForwarder addFace method, as the endpoint
    * of this connection in the MicroForwarder.
    */
-  class Endpoint : public ndn::Transport {
+  class Endpoint : public ndn_ind::Transport {
   public:
     Endpoint(MicroForwarderTransport* transport)
     : elementBuffer_(1000),
@@ -137,7 +137,7 @@ private:
     {}
 
     virtual bool
-    isLocal(const ndn::Transport::ConnectionInfo& connectionInfo) { return true;}
+    isLocal(const ndn_ind::Transport::ConnectionInfo& connectionInfo) { return true;}
 
     virtual bool
     isAsync() { return false; }
@@ -151,11 +151,11 @@ private:
      * @param onConnected
      */
     virtual void
-    connect(const ndn::Transport::ConnectionInfo& connectionInfo,
-      ndn::ElementListener& elementListener, const OnConnected& onConnected)
+    connect(const ndn_ind::Transport::ConnectionInfo& connectionInfo,
+      ndn_ind::ElementListener& elementListener, const OnConnected& onConnected)
     {
       // Ignore the connectionInfo. We already got what we need in the constructor.
-      elementReader_.reset(&ndn::ElementListenerLite::downCast(elementListener));
+      elementReader_.reset(&ndn_ind::ElementListenerLite::downCast(elementListener));
 
       if (onConnected)
         onConnected();
@@ -192,16 +192,16 @@ private:
   private:
     friend class MicroForwarder;
 
-    ndn::DynamicMallocUInt8ArrayLite elementBuffer_;
-    ndn::ElementReaderLite elementReader_;
+    ndn_ind::DynamicMallocUInt8ArrayLite elementBuffer_;
+    ndn_ind::ElementReaderLite elementReader_;
     MicroForwarderTransport* transport_;
   };
 
 private:
   ConnectionInfo connectionInfo_;
-  ndn::DynamicMallocUInt8ArrayLite elementBuffer_;
-  ndn::ElementReaderLite elementReader_;
-  ndn::ptr_lib::shared_ptr<Endpoint> endpoint_;
+  ndn_ind::DynamicMallocUInt8ArrayLite elementBuffer_;
+  ndn_ind::ElementReaderLite elementReader_;
+  ndn_ind::ptr_lib::shared_ptr<Endpoint> endpoint_;
   bool isLocal_;
   // Set outFaceId_ to specify the only output face for sending packets.
   int outFaceId_;

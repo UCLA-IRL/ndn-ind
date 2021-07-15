@@ -42,7 +42,7 @@
 #include "../c/encoding/element-reader.h"
 #include "../util/dynamic-uint8-vector.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * AsyncSocketTransport is a helper template class for AsyncTcpTransport and

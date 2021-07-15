@@ -36,7 +36,7 @@
 
 #include <ndn-ind/security/command-interest-preparer.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 class KeyChain;
 

@@ -36,7 +36,7 @@
 
 #include "../common.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * EncryptError holds the ErrorCode enum and OnError callback definition for

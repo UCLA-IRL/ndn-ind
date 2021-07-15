@@ -36,7 +36,7 @@
 
 #include "../../c/util/blob-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A BlobLite holds a pointer to an immutable pre-allocated buffer and its length

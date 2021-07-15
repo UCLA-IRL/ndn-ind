@@ -47,9 +47,9 @@ INIT_LOGGER("ndn.ChronoSync2013");
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn::func_lib;
+using namespace ndn_ind::func_lib;
 
-namespace ndn {
+namespace ndn_ind {
 
 ChronoSync2013::Impl::Impl
   (const OnReceivedSyncState& onReceivedSyncState,

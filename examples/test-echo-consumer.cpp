@@ -43,8 +43,8 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 class Counter
 {
@@ -145,7 +145,7 @@ int main(int argc, char** argv)
       face.reset(new Face());
     else
       face.reset(new Face
-        (ptr_lib::make_shared<TcpTransport>(), 
+        (ptr_lib::make_shared<TcpTransport>(),
          ptr_lib::make_shared<TcpTransport::ConnectionInfo>(host.c_str(), port)));
 
     // Counter holds data used by the callbacks.

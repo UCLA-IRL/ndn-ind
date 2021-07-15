@@ -40,7 +40,7 @@
 // Give friend access to the tests.
 class TestPibIdentityImpl_KeyOperation_Test;
 
-namespace ndn {
+namespace ndn_ind {
 
 class PibKey;
 

@@ -45,7 +45,7 @@
 #include "encoding/wire-format.hpp"
 #include "lite/name-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A Name holds an array of Name::Component and represents an NDN name.

@@ -46,7 +46,7 @@ using namespace std::chrono;
 
 INIT_LOGGER("ndn.PSyncProducerBase");
 
-namespace ndn {
+namespace ndn_ind {
 
 PSyncProducerBase::PSyncProducerBase
   (size_t expectedNEntries, const Name& syncPrefix,

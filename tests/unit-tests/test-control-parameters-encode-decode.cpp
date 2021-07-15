@@ -37,7 +37,7 @@
 #include <ndn-ind/control-parameters.hpp>
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 class TestControlParametersEncodeDecode : public ::testing::Test {
 };

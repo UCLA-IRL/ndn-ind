@@ -27,7 +27,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A TlvDecoder extends a C ndn_TlvDecoder struct and wraps related functions.

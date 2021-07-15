@@ -40,7 +40,7 @@
 #include "lite/network-nack-lite.hpp"
 #include "lp-packet-header-field.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class LpPacket;
 
@@ -80,7 +80,7 @@ public:
   /**
    * Set the network Nack reason.
    * @param reason The network Nack reason enum value. If the packet's reason
-   * code is not a recognized Reason enum value, use 
+   * code is not a recognized Reason enum value, use
    * ndn_NetworkNackReason_OTHER_CODE and call setOtherReasonCode().
    * @return This NetworkNack so that you can chain calls to update values.
    */

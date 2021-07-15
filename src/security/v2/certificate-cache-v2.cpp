@@ -41,7 +41,7 @@ using namespace std::chrono;
 
 INIT_LOGGER("ndn.CertificateCacheV2");
 
-namespace ndn {
+namespace ndn_ind {
 
 CertificateCacheV2::CertificateCacheV2(nanoseconds maxLifetime)
 : maxLifetime_(maxLifetime),

@@ -37,7 +37,7 @@
 #include "control-parameters-lite.hpp"
 #include "../c/control-response-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A ControlResponseLite holds a status code, status text and other fields for a

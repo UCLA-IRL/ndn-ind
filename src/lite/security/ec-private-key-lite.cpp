@@ -36,7 +36,7 @@
 
 #if NDN_IND_HAVE_LIBCRYPTO
 
-namespace ndn {
+namespace ndn_ind {
 
 EcPrivateKeyLite::EcPrivateKeyLite()
 {

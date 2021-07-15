@@ -46,7 +46,7 @@
 using namespace std;
 using namespace std::chrono;
 
-namespace ndn {
+namespace ndn_ind {
 
 ptr_lib::shared_ptr<Transport>
 ThreadsafeFace::getDefaultTransport(boost::asio::io_service& ioService)
@@ -282,7 +282,7 @@ ThreadsafeFace::callLater
 {
   ptr_lib::shared_ptr<boost::asio::deadline_timer> timer
     (new boost::asio::deadline_timer
-     (ioService_, 
+     (ioService_,
       boost::posix_time::milliseconds(duration_cast<milliseconds>(delay).count())));
 
   // Pass the timer to waitHandler to keep it alive.

@@ -54,17 +54,17 @@ public:
    * or to null to always time out.
    * @param policy The ValidationPolicy used by validator_.
    */
-  ValidatorFixture(const ndn::ptr_lib::shared_ptr<ndn::ValidationPolicy>& policy);
+  ValidatorFixture(const ndn_ind::ptr_lib::shared_ptr<ndn_ind::ValidationPolicy>& policy);
 
   /**
    * TestFace extends Face to instantly simulate a call to expressInterest.
    * See expressInterest for details.
    */
-  class TestFace : public ndn::Face {
+  class TestFace : public ndn_ind::Face {
   public:
-    typedef ndn::func_lib::function<void
-      (const ndn::Interest& interest, const ndn::OnData& onData,
-       const ndn::OnTimeout& onTimeout, const ndn::OnNetworkNack& onNetworkNack)>
+    typedef ndn_ind::func_lib::function<void
+      (const ndn_ind::Interest& interest, const ndn_ind::OnData& onData,
+       const ndn_ind::OnTimeout& onTimeout, const ndn_ind::OnNetworkNack& onNetworkNack)>
       ProcessInterest;
 
     TestFace()
@@ -76,33 +76,33 @@ public:
      * processInterest_(interest, onData, onTimeout, onNetworkNack) which must
      * call one of the callbacks to simulate the response. Otherwise, just call
      * onTimeout(interest) to simulate a timeout. This adds the interest to
-     * sentInterests_ . 
+     * sentInterests_ .
      */
     virtual uint64_t
     expressInterest
-      (const ndn::Interest& interest, const ndn::OnData& onData,
-       const ndn::OnTimeout& onTimeout, const ndn::OnNetworkNack& onNetworkNack,
-       ndn::WireFormat& wireFormat = *ndn::WireFormat::getDefaultWireFormat());
+      (const ndn_ind::Interest& interest, const ndn_ind::OnData& onData,
+       const ndn_ind::OnTimeout& onTimeout, const ndn_ind::OnNetworkNack& onNetworkNack,
+       ndn_ind::WireFormat& wireFormat = *ndn_ind::WireFormat::getDefaultWireFormat());
 
     ProcessInterest processInterest_;
-    std::vector<ndn::Interest> sentInterests_;
+    std::vector<ndn_ind::Interest> sentInterests_;
   };
 
   void
   processInterestFromCache
-    (const ndn::Interest& interest, const ndn::OnData& onData,
-     const ndn::OnTimeout& onTimeout, const ndn::OnNetworkNack& onNetworkNack);
+    (const ndn_ind::Interest& interest, const ndn_ind::OnData& onData,
+     const ndn_ind::OnTimeout& onTimeout, const ndn_ind::OnNetworkNack& onNetworkNack);
 
   TestFace face_;
-  ndn::Validator validator_;
-  ndn::ptr_lib::shared_ptr<ndn::ValidationPolicy> policy_;
-  ndn::CertificateCacheV2 cache_;
+  ndn_ind::Validator validator_;
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::ValidationPolicy> policy_;
+  ndn_ind::CertificateCacheV2 cache_;
 };
 
 class HierarchicalValidatorFixture : public ValidatorFixture {
 public:
   HierarchicalValidatorFixture
-    (const ndn::ptr_lib::shared_ptr<ndn::ValidationPolicy>& policy)
+    (const ndn_ind::ptr_lib::shared_ptr<ndn_ind::ValidationPolicy>& policy)
   : ValidatorFixture(policy)
   {
     identity_ = addIdentity("/Security/V2/ValidatorFixture");
@@ -111,7 +111,7 @@ public:
     otherIdentity_ = addIdentity("/Security/V2/OtherIdentity");
 
     validator_.loadAnchor
-      ("", ndn::CertificateV2(*identity_->getDefaultKey()->getDefaultCertificate()));
+      ("", ndn_ind::CertificateV2(*identity_->getDefaultKey()->getDefaultCertificate()));
 
     cache_.insert(*identity_->getDefaultKey()->getDefaultCertificate());
     cache_.insert(*subIdentity_->getDefaultKey()->getDefaultCertificate());
@@ -119,10 +119,10 @@ public:
     cache_.insert(*otherIdentity_->getDefaultKey()->getDefaultCertificate());
   }
 
-  ndn::ptr_lib::shared_ptr<ndn::PibIdentity> identity_;
-  ndn::ptr_lib::shared_ptr<ndn::PibIdentity> subIdentity_;
-  ndn::ptr_lib::shared_ptr<ndn::PibIdentity> subSelfSignedIdentity_;
-  ndn::ptr_lib::shared_ptr<ndn::PibIdentity> otherIdentity_;
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::PibIdentity> identity_;
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::PibIdentity> subIdentity_;
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::PibIdentity> subSelfSignedIdentity_;
+  ndn_ind::ptr_lib::shared_ptr<ndn_ind::PibIdentity> otherIdentity_;
 };
 
 #endif

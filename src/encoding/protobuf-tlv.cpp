@@ -45,7 +45,7 @@
 using namespace std;
 using namespace google::protobuf;
 
-namespace ndn {
+namespace ndn_ind {
 
 static void
 encodeMessageValue(const void *context, TlvEncoder &encoder)

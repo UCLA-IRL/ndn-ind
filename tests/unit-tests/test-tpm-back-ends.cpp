@@ -50,7 +50,7 @@
 #include <ndn-ind/encoding/base64.hpp>
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 static bool
 fileExists(const string& filePath)

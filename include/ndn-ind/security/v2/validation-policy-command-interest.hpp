@@ -38,7 +38,7 @@
 #include <map>
 #include "validation-policy.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * ValidationPolicyCommandInterest extends ValidationPolicy as a policy for

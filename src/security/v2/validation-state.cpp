@@ -40,7 +40,7 @@ INIT_LOGGER("ndn.ValidationState");
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 ValidationState::~ValidationState() {}
 

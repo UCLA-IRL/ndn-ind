@@ -36,7 +36,7 @@
 
 #include "../../c/security/validity-period-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A ValidityPeriodLite is used in a Data packet's SignatureInfo and represents

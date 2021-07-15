@@ -43,7 +43,7 @@
 #include "pib-data-fixture.hpp"
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 class PibMemoryFixture : public PibDataFixture
 {
@@ -100,7 +100,7 @@ public:
   }
 
   string databaseFilePath;
-  
+
 private:
   ptr_lib::shared_ptr<PibSqlite3> myPib_;
 };

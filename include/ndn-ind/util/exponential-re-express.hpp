@@ -36,7 +36,7 @@
 
 #include "../face.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An ExponentialReExpress uses an internal onTimeout to express the interest
@@ -65,7 +65,7 @@ public:
    * NOTE: The library will log any exceptions thrown by this callback, but for
    * better error handling the callback should catch and properly handle any
    * exceptions.
-   * @param maxInterestLifetime (optional) The maximum lifetime for re-expressed 
+   * @param maxInterestLifetime (optional) The maximum lifetime for re-expressed
    * interests. If omitted, use 16 seconds.
    * @return The OnTimeout function object to pass to expressInterest.
    */

@@ -45,8 +45,8 @@
 #include <ndn-ind/hmac-with-sha256-signature.hpp>
 
 using namespace std;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 uint8_t TlvInterest[] = {
 0x05, 0x47,   // NDN Interest

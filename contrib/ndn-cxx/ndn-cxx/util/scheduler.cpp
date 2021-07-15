@@ -40,7 +40,7 @@
 
 #include <boost/scope_exit.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 namespace scheduler {
 
 using std::shared_ptr;
@@ -197,6 +197,6 @@ Scheduler::executeEvent(const boost::system::error_code& error)
 }
 
 } // namespace scheduler
-} // namespace ndn
+} // namespace ndn_ind
 
 #endif // NDN_IND_HAVE_BOOST_ASIO

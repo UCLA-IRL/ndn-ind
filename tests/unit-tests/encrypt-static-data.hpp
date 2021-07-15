@@ -51,10 +51,10 @@ public:
     return *instance_;
   }
 
-  ndn::Blob userIdentity;
-  std::vector<ndn::Blob> managerPackets;
-  std::vector<ndn::Blob> encryptedBlobs;
-  std::vector<ndn::Blob> encryptorPackets;
+  ndn_ind::Blob userIdentity;
+  std::vector<ndn_ind::Blob> managerPackets;
+  std::vector<ndn_ind::Blob> encryptedBlobs;
+  std::vector<ndn_ind::Blob> encryptorPackets;
 
 private:
   EncryptStaticData();

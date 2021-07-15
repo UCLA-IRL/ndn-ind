@@ -40,7 +40,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 ConfigFile::ConfigFile()
   : path_(findConfigFile())

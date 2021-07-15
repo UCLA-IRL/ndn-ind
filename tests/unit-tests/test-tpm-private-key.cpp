@@ -42,7 +42,7 @@
 #include <ndn-ind/security/tpm/tpm-private-key.hpp>
 
 using namespace std;
-using namespace ndn;
+using namespace ndn_ind;
 
 class KeyTestData {
 public:

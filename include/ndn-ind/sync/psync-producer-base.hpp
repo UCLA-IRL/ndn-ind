@@ -38,7 +38,7 @@
 #include <map>
 #include "../name.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 class InvertibleBloomLookupTable;
 

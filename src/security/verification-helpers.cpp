@@ -42,7 +42,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 bool
 VerificationHelpers::verifySignature

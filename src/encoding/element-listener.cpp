@@ -34,7 +34,7 @@
 #include "../c/encoding/element-listener.h"
 #include <ndn-ind/encoding/element-listener.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 ElementListener::ElementListener()
 {

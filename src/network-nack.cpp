@@ -34,7 +34,7 @@
 #include "lp/lp-packet.hpp"
 #include <ndn-ind/network-nack.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 NetworkNack::~NetworkNack() {}
 

@@ -41,7 +41,7 @@
 
 #include <chrono>
 
-namespace ndn {
+namespace ndn_ind {
 namespace scheduler {
 
 /**
@@ -78,7 +78,7 @@ public:
 };
 
 } // namespace scheduler
-} // namespace ndn
+} // namespace ndn_ind
 
 #endif // NDN_UTIL_TIME_HPP
 

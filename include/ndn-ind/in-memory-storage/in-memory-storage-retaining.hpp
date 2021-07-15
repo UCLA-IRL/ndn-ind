@@ -43,7 +43,7 @@
 class TestEncryptorV2_EnumerateDataFromInMemoryStorage_Test;
 class TestAccessManagerV2_EnumerateDataFromInMemoryStorage_Test;
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * InMemoryStorageRetaining provides an application cache with in-memory

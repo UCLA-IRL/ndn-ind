@@ -39,7 +39,7 @@
 #include <ndn-ind/security/key-chain.hpp>
 #include <ndn-ind/in-memory-storage/in-memory-storage-retaining.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * The PSyncSegmentPublisher class has methods to publish segmented data used by
@@ -55,7 +55,7 @@ public:
    * If omitted, use MAX_SEGMENTS_STORED.
    */
   PSyncSegmentPublisher
-    (Face& face, KeyChain& keyChain, 
+    (Face& face, KeyChain& keyChain,
      size_t inMemoryStorageLimit = MAX_SEGMENTS_STORED)
   : face_(face), keyChain_(keyChain)
 #if 0 // Until InMemoryStorageFifo implements an eviction policy, use InMemoryStorageRetaining.

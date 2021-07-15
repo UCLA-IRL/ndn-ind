@@ -37,7 +37,7 @@
 
 #include "validation-policy.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * ValidationPolicySimpleHierarchy extends ValidationPolicy to implement a

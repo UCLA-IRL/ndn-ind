@@ -37,7 +37,7 @@
 #include "name.hpp"
 #include "lite/exclude-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An Exclude holds a vector of Exclude::Entry.

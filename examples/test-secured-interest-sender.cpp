@@ -42,8 +42,8 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 /**
  * Add a hard-coded identity to the KeyChain for the sender and return its
@@ -185,7 +185,7 @@ getSenderName(KeyChain& keyChain)
   };
 
   SafeBag firstMemberSafeBag
-    (ndn::Blob(firstMemberSafeBagEncoding, sizeof(firstMemberSafeBagEncoding)));
+    (ndn_ind::Blob(firstMemberSafeBagEncoding, sizeof(firstMemberSafeBagEncoding)));
   string safeBagPassword = "password";
   keyChain.importSafeBag
     (firstMemberSafeBag, (const uint8_t*)safeBagPassword.c_str(),
@@ -329,7 +329,7 @@ main(int argc, char** argv)
        validator.get(), nacKeyChain.get(), face.get(), ndn_EncryptAlgorithmType_AesCbc);
     encryptor->setCheckForNewGckInterval(checkGckInterval);
     // Create the DecryptorV2 to decrypt the reply Data packet.
-    auto decryptor = ptr_lib::make_shared<ndn::DecryptorV2>
+    auto decryptor = ptr_lib::make_shared<ndn_ind::DecryptorV2>
       (nacKeyChain->getPib().getIdentity(senderName)->getDefaultKey().get(),
        validator.get(), nacKeyChain.get(), face.get(), encryptor.get());
 
@@ -341,11 +341,11 @@ main(int argc, char** argv)
     encryptor->encrypt
       (interest,
        [=](auto&, auto&) {
-         nacKeyChain->sign(*interest);         
+         nacKeyChain->sign(*interest);
          face->expressInterest(
            *interest,
            [=](auto&, auto& data) { onData(data, validator, decryptor); },
-           [](auto& i) { 
+           [](auto& i) {
              cout << "Timeout for interest " << i->getName().toUri() << endl;
              isRunning = false;
            });

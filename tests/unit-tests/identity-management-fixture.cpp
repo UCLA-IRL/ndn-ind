@@ -40,7 +40,7 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
+using namespace ndn_ind;
 
 IdentityManagementFixture::~IdentityManagementFixture()
 {
@@ -96,7 +96,7 @@ IdentityManagementFixture::saveCertificate
 ptr_lib::shared_ptr<PibIdentity>
 IdentityManagementFixture::addSubCertificate
   (const Name& subIdentityName,
-   const ndn::ptr_lib::shared_ptr<ndn::PibIdentity>& issuer,
+   const ndn_ind::ptr_lib::shared_ptr<ndn_ind::PibIdentity>& issuer,
    const KeyParams& params)
 {
   ptr_lib::shared_ptr<PibIdentity> subIdentity =

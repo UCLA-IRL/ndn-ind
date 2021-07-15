@@ -44,7 +44,7 @@
 
 struct ndn_UnixTransport;
 
-namespace ndn {
+namespace ndn_ind {
 
 class DynamicUInt8Vector;
 

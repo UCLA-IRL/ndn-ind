@@ -37,7 +37,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 const Name&
 PibIdentity::getName() { return lock()->getName(); }

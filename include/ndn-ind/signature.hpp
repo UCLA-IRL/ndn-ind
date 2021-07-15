@@ -38,7 +38,7 @@
 #include "util/blob.hpp"
 #include "lite/signature-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A Signature is an abstract base class providing methods to work with the signature information in a Data packet.

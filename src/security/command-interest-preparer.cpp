@@ -41,7 +41,7 @@
 using namespace std;
 using namespace std::chrono;
 
-namespace ndn {
+namespace ndn_ind {
 
 CommandInterestPreparer::CommandInterestPreparer()
   // Fix to milliseconds.

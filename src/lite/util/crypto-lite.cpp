@@ -35,7 +35,7 @@
 #include "../../../contrib/murmur-hash/murmur-hash.h"
 #include <ndn-ind/lite/util/crypto-lite.hpp>
 
-namespace ndn {
+namespace ndn_ind {
 
 void
 CryptoLite::digestSha256(const uint8_t *data, size_t dataLength, uint8_t *digest)

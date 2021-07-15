@@ -39,7 +39,7 @@
 #include "../key-locator.hpp"
 #include "../lite/encrypt/encrypted-content-lite.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An EncryptedContent holds an encryption type, a payload and other fields

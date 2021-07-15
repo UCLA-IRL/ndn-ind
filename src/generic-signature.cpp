@@ -36,7 +36,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 ptr_lib::shared_ptr<Signature>
 GenericSignature::clone() const

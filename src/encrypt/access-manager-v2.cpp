@@ -40,11 +40,11 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn::func_lib;
+using namespace ndn_ind::func_lib;
 
 INIT_LOGGER("ndn.AccessManagerV2");
 
-namespace ndn {
+namespace ndn_ind {
 
 
 void

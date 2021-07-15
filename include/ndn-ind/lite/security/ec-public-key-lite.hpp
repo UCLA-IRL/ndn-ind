@@ -38,7 +38,7 @@
 #include "../../c/errors.h"
 #include "../../c/security/ec-public-key-types.h"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * An EcPublicKeyLite holds a decoded EC public key for use in crypto operations.

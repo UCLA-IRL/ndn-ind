@@ -36,7 +36,7 @@
 
 using namespace std;
 
-namespace ndn {
+namespace ndn_ind {
 
 CommandInterestSigner::CommandInterestSigner(KeyChain& keyChain)
 : keyChain_(keyChain)

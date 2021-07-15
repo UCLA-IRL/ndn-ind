@@ -38,7 +38,7 @@
 #include <string>
 #include "../../common.hpp"
 
-namespace ndn {
+namespace ndn_ind {
 
 /**
  * A ValidationError holds an error code and an optional detailed error message.

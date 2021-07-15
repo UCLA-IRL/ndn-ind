@@ -45,8 +45,8 @@
 
 using namespace std;
 using namespace std::chrono;
-using namespace ndn;
-using namespace ndn::func_lib;
+using namespace ndn_ind;
+using namespace ndn_ind::func_lib;
 
 class CallbackCounter
 {
@@ -347,7 +347,7 @@ TEST_F(TestFaceInterestMethods, MaxNdnPacketSize)
     (Name().append(componentValue, targetSize - (initialSize - targetSize)));
   size_t interestSize = interest.wireEncode().size();
   ASSERT_EQ(targetSize, interestSize) << "Wrong interest size for MaxNdnPacketSize";
-  
+
   CallbackCounter counter;
   ASSERT_THROW
     (face.expressInterest

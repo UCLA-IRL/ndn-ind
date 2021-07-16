@@ -7,5 +7,5 @@ Name: NDN-IND
 Description: NDN Client Library for C++ and C
 URL: https://github.com/operantnetworks/ndn-ind
 Version: @PACKAGE_VERSION@
-Cflags: -I${includedir}
-Libs: -L${libdir} -lndn-ind
+Cflags: -I${includedir} -I/opt/local/include
+Libs: -L${libdir} -L/opt/local/lib -lndn-ind

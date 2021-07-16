@@ -109,6 +109,7 @@ ndn_ind_c_headers = \
 # Public C++ headers.
 # NOTE: If a new directory is added, then add it to ndn_ind_cpp_headers in include/Makefile.am.
 ndn_ind_cpp_headers = \
+  include/ndn-ind/async-face.hpp \
   include/ndn-ind/common.hpp \
   include/ndn-ind/control-parameters.hpp \
   include/ndn-ind/control-response.hpp \
